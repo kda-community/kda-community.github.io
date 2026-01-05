@@ -97,7 +97,7 @@
                     <li><a href="ecosystem.html" class="block py-2 px-3 md:p-0 text-white bg-brand rounded md:bg-transparent md:text-brand" aria-current="page">Ecosystem</a></li>
                     
                     <li><a href="wallets.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a></li>
-                    <li><a href="https://explorer.chainweb-community.org/mainnet" target="_blank" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a></li>
+                    <li><a href="https://explorer.chainweb-community.org/mainnet" target="_blank" class="external-link block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a></li>
                 </ul>
             </div>
         </div>
@@ -663,10 +663,8 @@
                 <div id="modal-panel" class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md">
                     <div class="p-6">
                         <div class="flex items-center justify-center mb-5">
-                            <div class="rounded-full bg-gray-100 dark:bg-gray-800 p-3">
-                                <svg class="h-8 w-8 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                </svg>
+                            <div class="rounded-full bg-gray-100 dark:bg-gray-800 p-4">
+                            <img src="img/favicon.svg" alt="Kadena" class="h-10 w-10">
                             </div>
                         </div>
                         <div class="text-center">
@@ -721,7 +719,7 @@
     </footer>
 
     <script>
-        // --- 1. MODAL LOGIC (Updated) ---
+        // --- UNIVERSAL MODAL LOGIC ---
         const modal = document.getElementById('warning-modal');
         const btnProceed = document.getElementById('btn-proceed');
         const btnCancel = document.getElementById('btn-cancel');
@@ -737,28 +735,52 @@
             targetUrl = '';
         }
 
-        // Attach listener to ALL links inside project cards
-        document.querySelectorAll('.project-card a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault(); // Stop navigation
-                openModal(link.href); // Open modal with target URL
-            });
+        // Smart Event Delegation for ALL external links
+        document.body.addEventListener('click', (event) => {
+            // Find the closest anchor tag (<a>) to the click
+            const link = event.target.closest('a');
+            
+            if (!link) return; // If not a link, do nothing
+
+            // Criteria to trigger the popup:
+            // 1. It is inside a Card (Project, Miner, Wallet, Tool)
+            const isCardLink = link.closest('.project-card') || link.closest('.miner-card') || link.closest('.wallet-card') || link.closest('.group');
+            
+            // 2. It is inside the Footer
+            const isFooterLink = link.closest('footer');
+
+            // 3. It has the specific class 'external-link' (For Navbar Explorer & Dynamic News)
+            const isExplicitExternal = link.classList.contains('external-link');
+
+            // 4. It is the Setup Guide Button
+            const isSetupButton = link.id === 'setup-guide-btn';
+
+            // COMBINED CHECK:
+            // If it matches ANY criteria above AND it is NOT an internal anchor (#) or javascript
+            if ((isCardLink || isFooterLink || isExplicitExternal || isSetupButton) && !link.href.startsWith('javascript') && !link.href.includes('#')) {
+                
+                // Final Check: Is it actually an external domain?
+                const currentDomain = window.location.hostname;
+                // If hostname is different (and not empty for local testing), trigger modal
+                if (link.hostname !== currentDomain && link.hostname !== '') {
+                    event.preventDefault(); // Stop the immediate navigation
+                    openModal(link.href);   // Show our custom modal
+                }
+            }
         });
 
-        // Proceed Button
+        // Proceed Button (User clicked "Visit Site")
         btnProceed.addEventListener('click', () => {
             if(targetUrl) {
-                window.open(targetUrl, '_blank'); // Open in new tab
+                window.open(targetUrl, '_blank');
                 closeModal();
             }
         });
 
-        // Cancel Button
+        // Cancel Button (User clicked "Go Back")
         btnCancel.addEventListener('click', closeModal);
 
-        // Click Outside (Improved Logic)
-        // We listen for clicks on the modal wrapper. If the click target is NOT
-        // inside the modal-panel (the white card), we close it.
+        // Click Outside to Close
         modal.addEventListener('click', (e) => {
             const panel = document.getElementById('modal-panel');
             if (!panel.contains(e.target)) {
