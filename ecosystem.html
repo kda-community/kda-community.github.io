@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadena Ecosystem | Ecosystem</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    
+<meta property="og:type" content="website">
+    <meta property="og:url" content="https://kda-community.github.io/ecosystem.html">
+    <meta property="og:title" content="Kadena Ecosystem | Ecosystem">
+    <meta property="og:description" content="Discover the dApps, NFTs, DeFi protocols, and tools built on Kadena.">
+    <meta property="og:image" content="https://kda-community.github.io/img/og_card/og_ecosystem.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kda-community.github.io/ecosystem.html">
+    <meta property="twitter:title" content="Kadena Ecosystem | Ecosystem">
+    <meta property="twitter:description" content="Discover the dApps, NFTs, DeFi protocols, and tools built on Kadena.">
+    <meta property="twitter:image" content="https://kda-community.github.io/img/og_card/og_ecosystem.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#63e038', /* Green */
+                            hover: '#4ecf25',
+                        },
+                        dao: {
+                            DEFAULT: '#f7931a', /* Orange */
+                            hover: '#e0820b',
+                        },
+                        dev: {
+                            DEFAULT: '#3498db', /* Blue */
+                            hover: '#2980b9',
+                        },
+                        surface: {
+                            light: '#FAFAFA',
+                            dark: '#050505',
+                            card: '#121212',
+                            border: '#27272a'
+                        },
+                        text: {
+                            mainLight: '#1e1f23',
+                            mainDark: '#f5f5f5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { transition: background-color 0.3s, color 0.3s; }
+        .aspect-video { aspect-ratio: 16 / 9; }
+    </style>
+</head>
+<body class="bg-surface-light dark:bg-surface-dark bg-grid text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:bg-brand selection:text-black overflow-x-hidden flex flex-col min-h-screen">
+
+    <div class="fixed inset-0 pointer-events-none vignette z-0"></div>
+
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-surface-border bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
+            
+            <a href="index.html" class="flex items-center">
+                <img src="img/kadenace_dark.svg" class="h-9 md:h-12 w-auto block dark:hidden" alt="Kadena">
+                <img src="img/kadenace_light.svg" class="h-9 md:h-12 w-auto hidden dark:block" alt="Kadena">
+            </a>
+
+            <div class="flex md:order-2 space-x-2 md:space-x-4 items-center">
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+                <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
+                </button>
+            </div>
+
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
+                    <li><a href="miners.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Miners</a></li>
+                    <li><a href="developers.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dev dark:text-white dark:hover:bg-gray-700 dark:hover:text-dev">Developers</a></li>
+                    <li><a href="dao.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dao dark:text-white dark:hover:bg-gray-700 dark:hover:text-dao">DAO</a></li>
+                    
+                    <li><a href="ecosystem.html" class="block py-2 px-3 md:p-0 text-white bg-brand rounded md:bg-transparent md:text-brand" aria-current="page">Ecosystem</a></li>
+                    
+                    <li><a href="wallets.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a></li>
+                    <li><a href="https://explorer.chainweb-community.org/mainnet" target="_blank" class="external-link block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-24 px-4 relative z-10 w-full flex-grow">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                    Explore the <span class="text-brand">Ecosystem</span>
+                </h1>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Discover the dApps, tools, and protocols building the future on Kadena.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="filter-container">
+                <button onclick="filterProjects('all')" data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-sm font-bold border transition-all bg-brand text-black border-brand hover:opacity-90">All</button>
+                <button onclick="filterProjects('defi')" data-filter="defi" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">DeFi</button>
+                <button onclick="filterProjects('community')" data-filter="community" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Community</button>
+                <button onclick="filterProjects('game')" data-filter="game" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Game</button>
+                <button onclick="filterProjects('oracles')" data-filter="oracles" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Oracles</button>
+                <button onclick="filterProjects('exchanges')" data-filter="exchanges" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Exchanges</button>
+                <button onclick="filterProjects('dex')" data-filter="dex" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">DEX</button>
+                <button onclick="filterProjects('nft')" data-filter="nft" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">NFT</button>
+                <button onclick="filterProjects('bridge')" data-filter="bridge" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Bridge</button>
+                <button onclick="filterProjects('tools')" data-filter="tools" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Tools</button>
+                <button onclick="filterProjects('infra')" data-filter="infra" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Infra</button>
+                
+                <button onclick="filterProjects('protocol')" data-filter="protocol" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Protocol</button>
+                <button onclick="filterProjects('explorer')" data-filter="explorer" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-card hover:border-brand hover:text-brand transition-all">Explorer</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="infra defi bridge">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-hyperline.svg" onerror="this.src='https://placehold.co/100x100?text=HL'" alt="Hyperlane" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col items-end gap-1">
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-transparent dark:border-slate-700">Infra</span>
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 border border-transparent dark:border-indigo-800/50">Bridge</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Hyperlane</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            The permissionless interoperability layer connecting Kadena to the modular blockchain world.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/hyperlane" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.hyperlane.xyz/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="infra defi bridge">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-flux.svg" onerror="this.src='https://placehold.co/100x100?text=FX'" alt="Flux" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col items-end gap-1">
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-transparent dark:border-slate-700">Infra</span>
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 border border-transparent dark:border-indigo-800/50">Bridge</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Flux</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            Decentralized Web3 cloud infrastructure offering scalable computing and blockchain-as-a-service.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/RunOnFlux" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://runonflux.com/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="dex defi">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-mercatus.svg" onerror="this.src='https://placehold.co/100x100?text=M'" alt="Mercatus" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-transparent dark:border-blue-800/50">DEX</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Mercatus</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A decentralized exchange DEX facilitating secure and trustless trading.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/MercOnKadena" target="_blank" class="hover:text-brand transition-colors" aria-label="Mercatus on X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.mercatus.works/" target="_blank" class="hover:text-brand transition-colors" aria-label="Mercatus Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="dex defi">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-brodex.svg" onerror="this.src='https://placehold.co/100x100?text=B'" alt="Brodex" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-transparent dark:border-blue-800/50">DEX</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Brodex</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A community-driven decentralized exchange offering seamless swaps and liquidity pools.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/thebrothersdao" target="_blank" class="hover:text-brand transition-colors" aria-label="Brodex on X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://dex.bro.pink/" target="_blank" class="hover:text-brand transition-colors" aria-label="Brodex Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="community">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-theBrothersDao.svg" onerror="this.src='https://placehold.co/100x100?text=DAO'" alt="Brothers DAO" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-transparent dark:border-orange-800/50">Community</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">The Brothers DAO</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A decentralized autonomous organization building products and fostering community on Kadena.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/thebrothersdao" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.bro.pink/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="community">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-kishu.svg" onerror="this.src='https://placehold.co/100x100?text=KK'" alt="Kishu Ken" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-transparent dark:border-orange-800/50">Community</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Kishu Ken</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A community-centric project bringing meme culture and utility to the Kadena ecosystem.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/Kishu_Ken_KDA" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://kishuken.me/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="community">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-azuki.svg" onerror="this.src='https://placehold.co/100x100?text=AZ'" alt="Azuki" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-transparent dark:border-orange-800/50">Community</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Azuki</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A vibrant community project focused on engagement and growth within the ecosystem.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/AzukiKDA" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://azukionkadena.fun/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="community defi mining">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-chipsfinance.svg" onerror="this.src='https://placehold.co/100x100?text=CH'" alt="Chips" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col items-end gap-1">
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-transparent dark:border-orange-800/50">Community</span>
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300 border border-transparent dark:border-yellow-800/50">Mining</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Chips Finance</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            Gamified DeFi and Mining protocol allowing users to earn rewards through liquidity provision.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/Chips_Finance" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.chips.finance/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="community">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-unnit.svg" onerror="this.src='https://placehold.co/100x100?text=UN'" alt="Unitt" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-transparent dark:border-orange-800/50">Community</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Unitt</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A tokenized chat application rewarding users for content and engagement on-chain.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/UNITT_io" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.unitt.io/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="community game nft">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-wizards.svg" onerror="this.src='https://placehold.co/100x100?text=WZ'" alt="Wizards Arena" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col items-end gap-1">
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-transparent dark:border-orange-800/50">Community</span>
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 border border-transparent dark:border-red-800/50">Game</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Wizards Arena</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A P2E RPG game on Kadena where you battle, upgrade wizards, and earn rewards.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/WizardsArena" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://linktr.ee/wizardsarena" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="community nft">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-herron.svg" onerror="this.src='https://placehold.co/100x100?text=HH'" alt="Heron Heroes" class="w-full h-full object-contain">
+                        </div>
+                         <span class="px-2 py-1 text-xs font-mono rounded bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-transparent dark:border-orange-800/50">Community</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Heron Heroes</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            An exclusive NFT collection focused on building a strong community and future utility.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/HeronHeroesKDA" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.heronheroes.com/welcome" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="nft">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-kittykad.svg" onerror="this.src='https://placehold.co/100x100?text=KK'" alt="Kitty Kad" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300 border border-transparent dark:border-pink-800/50">NFT</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Kitty Kad</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A community-driven NFT project with unique digital collectibles on the Kadena blockchain.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/KittyKadToken" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://kittykad.com/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="community defi">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-kadpad.svg " onerror="this.src='https://placehold.co/100x100?text=KP'" alt="KADPAD" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col items-end gap-1">
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-transparent dark:border-orange-800/50">Community</span>
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 border border-transparent dark:border-fuchsia-800/50">Launchpad</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">KADPAD</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            The first decentralized IDO Launchpad on the Kadena Network.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/kadpadxyz" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://kadpad.xyz/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="oracles defi">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-dia.svg" onerror="this.src='https://placehold.co/100x100?text=DIA'" alt="DIA" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300 border border-transparent dark:border-teal-800/50">Oracle</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">DIA</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            Open-source oracle platform creating transparent data feeds for the DeFi ecosystem.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/DIAdata_org" target="_blank" class="hover:text-brand transition-colors" aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://link3.to/dia" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="oracles tools">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-kia.svg" onerror="this.src='https://placehold.co/100x100?text=K'" alt="Kia" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300 border border-transparent dark:border-teal-800/50">Oracle</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Kia</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            Kadena Info Access. A community-led oracle solution for the Kadena blockchain.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://github.com/kda-community/kadena-info-access" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="exchanges">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-gate.svg" onerror="this.src='https://placehold.co/100x100?text=G'" alt="Gate.io" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-transparent dark:border-green-800/50">Exchange</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Gate.io</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A leading global exchange offering deep liquidity for KDA and advanced trading tools.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/Gate" target="_blank" class="hover:text-brand transition-colors" aria-label="Gate on X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.gate.com/" target="_blank" class="hover:text-brand transition-colors" aria-label="Gate Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="exchanges">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-coinex.svg" onerror="this.src='https://placehold.co/100x100?text=CX'" alt="CoinEx" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-transparent dark:border-green-800/50">Exchange</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">CoinEx</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            User-friendly global exchange known for its low fees and automated market making (AMM).
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/coinexcom" target="_blank" class="hover:text-brand transition-colors" aria-label="CoinEx on X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.coinex.com/en" target="_blank" class="hover:text-brand transition-colors" aria-label="CoinEx Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="exchanges">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-coimetro.svg" onerror="this.src='https://placehold.co/100x100?text=CM'" alt="CoinMetro" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-transparent dark:border-green-800/50">Exchange</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">CoinMetro</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            Fully regulated exchange offering easy fiat on-ramps and integrated KDA staking.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/CoinMetro" target="_blank" class="hover:text-brand transition-colors" aria-label="CoinMetro on X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://coinmetro.com/" target="_blank" class="hover:text-brand transition-colors" aria-label="CoinMetro Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="nft tools protocol">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-marmaladeNg.svg" onerror="this.src='https://placehold.co/100x100?text=M'" alt="Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col items-end gap-1">
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300 border border-transparent dark:border-pink-800/50">NFT</span>
+                            <span class="px-2 py-1 text-xs font-mono rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 border border-transparent dark:border-indigo-800/50">Protocol</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Marmalade</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            The standard for NFTs on Kadena. Poly-fungible, enforced royalties.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/marmalade_ng" target="_blank" class="hover:text-brand transition-colors" aria-label="Marmalade-NG on X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                         <a href="#" class="hover:text-brand transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg></a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="bridge defi">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-kinesisBridge.svg" onerror="this.src='https://placehold.co/100x100?text=B'" alt="Logo" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 border border-transparent dark:border-indigo-800/50">Bridge</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Kadena Bridge</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            Securely transfer assets between Kadena and Ethereum.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://x.com/kinesisxyz" target="_blank" class="hover:text-brand transition-colors" aria-label="Marmalade-NG on X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://kinesisbridge.xyz/" class="hover:text-brand transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg></a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="explorer tools">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-denascan.svg" onerror="this.src='https://placehold.co/100x100?text=DS'" alt="Denascan" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300 border border-transparent dark:border-sky-800/50">Explorer</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">DenaScan</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            A powerful block explorer for the Kadena network, providing real-time data and insights.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://denascan.com/" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group h-full flex flex-col relative p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="explorer tools">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/ecosystem/ecosystem-kdaexplorer.svg" onerror="this.src='https://placehold.co/100x100?text=KE'" alt="Kadena Explorer" class="w-full h-full object-contain">
+                        </div>
+                        <span class="px-2 py-1 text-xs font-mono rounded bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300 border border-transparent dark:border-sky-800/50">Explorer</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Kadena Explorer</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+                            The official block explorer for monitoring transactions, mining stats, and network health.
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <a href="https://explorer.chainweb-community.org/mainnet" target="_blank" class="hover:text-brand transition-colors" aria-label="Website">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div id="no-results" class="hidden text-center py-20">
+                <p class="text-xl text-gray-500">No projects found in this category yet.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="warning-modal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                
+                <div id="modal-panel" class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center mb-5">
+                            <div class="rounded-full bg-gray-100 dark:bg-gray-800 p-4">
+                            <img src="img/favicon.svg" alt="Kadena" class="h-10 w-10">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold leading-6 text-gray-900 dark:text-white" id="modal-title">Leaving Website</h3>
+                            <div class="mt-3">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    You are about to visit an external third-party website. Are you sure you want to proceed?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-[#0a0a0a] px-6 py-4 flex flex-row-reverse gap-3 sm:px-6">
+                        <button type="button" id="btn-proceed" class="inline-flex w-full justify-center rounded-lg bg-brand px-3 py-2 text-sm font-bold text-black shadow-sm hover:bg-brand-hover sm:w-auto transition-colors">
+                            Visit Site
+                        </button>
+                        <button type="button" id="btn-cancel" class="inline-flex w-full justify-center rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 sm:w-auto transition-colors">
+                            Go Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
+        <div class="w-full max-w-7xl mx-auto py-8 px-4 flex flex-col items-center justify-center gap-6">
+            
+            <div class="flex items-center space-x-6">
+                
+                <a href="https://medium.com/@communitykadena" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Medium">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                </a>
+
+                <a href="https://x.com/KdaCed/communities/explore" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="X">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                </a>
+
+                <a href="https://t.me/+3JzP9i19cM8wOWQ8" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Telegram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                </a>
+
+                <a href="https://discord.gg/58JRAuJ7" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Discord">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/></svg>
+                </a>
+
+            </div>
+
+            <div class="text-center">
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- UNIVERSAL MODAL LOGIC ---
+        const modal = document.getElementById('warning-modal');
+        const btnProceed = document.getElementById('btn-proceed');
+        const btnCancel = document.getElementById('btn-cancel');
+        let targetUrl = '';
+
+        function openModal(url) {
+            targetUrl = url;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            targetUrl = '';
+        }
+
+        // Smart Event Delegation for ALL external links
+        document.body.addEventListener('click', (event) => {
+            // Find the closest anchor tag (<a>) to the click
+            const link = event.target.closest('a');
+            
+            if (!link) return; // If not a link, do nothing
+
+            // Criteria to trigger the popup:
+            // 1. It is inside a Card (Project, Miner, Wallet, Tool)
+            const isCardLink = link.closest('.project-card') || link.closest('.miner-card') || link.closest('.wallet-card') || link.closest('.group');
+            
+            // 2. It is inside the Footer
+            const isFooterLink = link.closest('footer');
+
+            // 3. It has the specific class 'external-link' (For Navbar Explorer & Dynamic News)
+            const isExplicitExternal = link.classList.contains('external-link');
+
+            // 4. It is the Setup Guide Button
+            const isSetupButton = link.id === 'setup-guide-btn';
+
+            // COMBINED CHECK:
+            // If it matches ANY criteria above AND it is NOT an internal anchor (#) or javascript
+            if ((isCardLink || isFooterLink || isExplicitExternal || isSetupButton) && !link.href.startsWith('javascript') && !link.href.includes('#')) {
+                
+                // Final Check: Is it actually an external domain?
+                const currentDomain = window.location.hostname;
+                // If hostname is different (and not empty for local testing), trigger modal
+                if (link.hostname !== currentDomain && link.hostname !== '') {
+                    event.preventDefault(); // Stop the immediate navigation
+                    openModal(link.href);   // Show our custom modal
+                }
+            }
+        });
+
+        // Proceed Button (User clicked "Visit Site")
+        btnProceed.addEventListener('click', () => {
+            if(targetUrl) {
+                window.open(targetUrl, '_blank');
+                closeModal();
+            }
+        });
+
+        // Cancel Button (User clicked "Go Back")
+        btnCancel.addEventListener('click', closeModal);
+
+        // Click Outside to Close
+        modal.addEventListener('click', (e) => {
+            const panel = document.getElementById('modal-panel');
+            if (!panel.contains(e.target)) {
+                closeModal();
+            }
+        });
+
+
+        // --- 2. PROJECT FILTER LOGIC ---
+        function filterProjects(category) {
+            // Update Buttons
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            const inactiveClasses = ['bg-white', 'dark:bg-surface-card', 'border-gray-300', 'dark:border-gray-700', 'font-medium', 'hover:border-brand', 'hover:text-brand'];
+            const activeClasses = ['bg-brand', 'text-black', 'border-brand', 'font-bold', 'active'];
+
+            buttons.forEach(btn => {
+                const btnFilter = btn.getAttribute('data-filter');
+
+                // Reset to inactive first
+                btn.className = 'filter-btn px-4 py-2 rounded-full text-sm transition-all ' + inactiveClasses.join(' ');
+                
+                // Set to active
+                if(btnFilter === category) {
+                     btn.className = 'filter-btn px-4 py-2 rounded-full text-sm transition-all ' + activeClasses.join(' ');
+                }
+            });
+
+            // Filter Cards
+            const cards = document.querySelectorAll('.project-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const categories = card.getAttribute('data-category');
+                if (category === 'all' || categories.includes(category)) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Empty State
+            const noResults = document.getElementById('no-results');
+            if(visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        // --- 3. DARK MODE LOGIC ---
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+            document.documentElement.classList.remove('dark');
+        }
+        var themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+
+        // --- 4. BURGER MENU ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarCta = document.getElementById('navbar-cta');
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            navbarCta.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = navbarCta.contains(event.target);
+            const isClickOnButton = menuToggle.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnButton && !navbarCta.classList.contains('hidden')) {
+                navbarCta.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
