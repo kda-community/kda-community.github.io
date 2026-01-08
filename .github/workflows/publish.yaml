@@ -1,0 +1,110 @@
+name: Publish website
+
+on:
+  push:
+
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    name: "Build and publish"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+
+    # Setup
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Checkout Docs repository
+      uses: actions/checkout@v4
+      with:
+        repository: kda-community/kadena-docs-new
+        path: docs_tmp
+
+    - name: Checkout Pact repository
+      uses: actions/checkout@v4
+      with:
+        repository: kda-community/pact-5
+        path: docs_tmp/pact_tmp
+
+    - name: Print content
+      run: tree -L 3
+
+    - name: Install node
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24
+
+    - name: Build Pact Docs
+      run: |
+        cd docs_tmp
+        DOCS_DIR="docs/pact-5"
+        BUILTINS_DIR="docs/builtins"
+        SRC_DIR="pact_tmp"
+
+
+
+        # Create the target directory if it doesn't exist
+        mkdir -p $DOCS_DIR
+
+        # Copy the builtins directory to the Docusaurus docs/pact-5 folder
+        echo "Copying builtins files into $DOCS_DIR..."
+        cp -r $SRC_DIR/$BUILTINS_DIR/* $DOCS_DIR/
+
+        # Convert all files and directories to lowercase
+        echo "Converting file and directory names to lowercase..."
+        find $DOCS_DIR -depth | while read path; do
+            lowercase_path=$(echo "$path" | awk '{print tolower($0)}')
+            if [ "$path" != "$lowercase_path" ]; then
+                mv "$path" "$lowercase_path"
+            fi
+        done
+
+        # Find all markdown files and change lines that start with ### to ## if not the first line
+        echo "Updating markdown files..."
+        find $DOCS_DIR -name "*.md" | while read -r file; do
+            # change line 1 from ## to #
+            tmp=$(mktemp)
+            sed '1s/^##/#/' "$file" > "$tmp" && mv "$tmp" "$file"
+
+            # change lines 2 to end from ### to ##
+            tmp=$(mktemp)
+            sed '2,$s/^###/##/' "$file" > "$tmp" && mv "$tmp" "$file"
+        done
+
+    - name: Install JS dependencies
+      working-directory: docs_tmp
+      run: yarn install
+
+    - name : Build Docusaurus
+      working-directory: docs_tmp
+      run: yarn build
+
+    - name: Print content
+      run: tree -L 3
+
+    - name: Install Main website
+      run: |
+        mkdir -p public
+        cp -rf *.html public
+        cp -rf img public
+
+    - name: Install Doc site
+      run: |
+        mkdir -p public/docs
+        cp -rf docs_tmp/build/* public/docs
+
+    - name: Print content
+      run: tree -L 3 public
+
+    - name: Deploy to GH pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          force_orphan: true
