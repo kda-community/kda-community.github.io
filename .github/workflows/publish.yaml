@@ -2,11 +2,16 @@ name: Publish website
 
 on:
   workflow_dispatch:
-
+  
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
 jobs:
 
   build:
-    name: "Build and publish"
+    name: "Build and Push Artifact"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -28,9 +33,6 @@ jobs:
       with:
         repository: kda-community/pact-5
         path: docs_tmp/pact_tmp
-
-    - name: Print content
-      run: tree -L 3
 
     - name: Install node
       uses: actions/setup-node@v6
@@ -82,9 +84,6 @@ jobs:
       working-directory: docs_tmp
       run: yarn build
 
-    - name: Print content
-      run: tree -L 3
-
     - name: Install Main website
       run: |
         mkdir -p public
@@ -99,10 +98,19 @@ jobs:
     - name: Print content
       run: tree -L 3 public
 
-    - name: Deploy to GH pages
-      uses: peaceiris/actions-gh-pages@v4
+    - name: Send Artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
-          force_orphan: true
+          path: ./public
+
+  deploy:
+    name: Deploy Website
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
