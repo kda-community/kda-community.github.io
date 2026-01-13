@@ -301,7 +301,7 @@
             </div>
 
             <div class="text-center">
-                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All Rights Reserved.</span>
+               <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All Rights Reserved.</span>
             </div>
         </div>
     </footer>
@@ -458,6 +458,10 @@
                 navbarCta.classList.add('hidden');
             }
         });
+
+        // AUTOMATIC YEAR UPDATE
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
     </script>
 </body>
 </html>
