@@ -78,11 +78,11 @@ jobs:
 
     - name: Install JS dependencies
       working-directory: docs_tmp
-      run: yarn install
+      run: npm install
 
     - name : Build Docusaurus
       working-directory: docs_tmp
-      run: yarn build
+      run: npm run build
 
     - name: Install Main website
       run: |
