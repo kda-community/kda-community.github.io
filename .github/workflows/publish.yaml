@@ -89,6 +89,10 @@ jobs:
         mkdir -p public
         cp -rf *.html public
         cp -rf img public
+        
+    - name: Install Robots.txt file
+      run: | 
+        echo "# Algolia-Crawler-Verif: 700675B823DFA8AD" >> public/robots.txt
 
     - name: Install Doc site
       run: |
