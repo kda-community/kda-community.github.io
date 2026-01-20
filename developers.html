@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kadena Ecosystem | Developers</title>
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
+    <meta name="description"
+        content="Build the future with Pact. Documentation, tools, APIs, and resources for builders on Kadena.">
+    <meta name="keywords"
+        content="Kadena Developers, Pact Language, Smart Contracts, Chainweb, API, Documentation, Builders">
+    <meta name="author" content="Kadena Community">
+    <link rel="canonical" href="https://kda-community.github.io/developers.html">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kda-community.github.io/developers.html">
     <meta property="og:title" content="Kadena Ecosystem | Developers">
-    <meta property="og:description" content="Build the future with Pact. Documentation, tools, APIs, and resources for builders.">
+    <meta property="og:description"
+        content="Build the future with Pact. Documentation, tools, APIs, and resources for builders.">
     <meta property="og:image" content="https://kda-community.github.io/img/og_card/og_developers.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kda-community.github.io/developers.html">
     <meta property="twitter:title" content="Kadena Ecosystem | Developers">
-    <meta property="twitter:description" content="Build the future with Pact. Documentation, tools, APIs, and resources for builders.">
+    <meta property="twitter:description"
+        content="Build the future with Pact. Documentation, tools, APIs, and resources for builders.">
     <meta property="twitter:image" content="https://kda-community.github.io/img/og_card/og_developers.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -60,42 +72,74 @@
             }
         }
     </script>
-    
+
     <style>
-        body { transition: background-color 0.3s, color 0.3s; }
-        .aspect-video { aspect-ratio: 16 / 9; }
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .aspect-video {
+            aspect-ratio: 16 / 9;
+        }
     </style>
 </head>
-<body class="bg-surface-light dark:bg-surface-dark text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:bg-dev selection:text-white overflow-x-hidden flex flex-col min-h-screen">
 
-    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-surface-border bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md">
+<body
+    class="bg-surface-light dark:bg-surface-dark text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:bg-dev selection:text-white overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav
+        class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-surface-border bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
-            
+
             <a href="index.html" class="flex items-center">
                 <img src="img/kadenace_blue_dark.svg" class="h-9 md:h-12 w-auto block dark:hidden" alt="Kadena">
                 <img src="img/kadenace_blue_light.svg" class="h-9 md:h-12 w-auto hidden dark:block" alt="Kadena">
             </a>
 
             <div class="flex md:order-2 space-x-2 md:space-x-4 items-center">
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
                 </button>
-                <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
-                    <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
+                <button id="menu-toggle" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
                 </button>
             </div>
 
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
-                    <li><a href="miners.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Miners</a></li>
-                    
-                    <li><a href="developers.html" class="block py-2 px-3 md:p-0 text-white bg-dev rounded md:bg-transparent md:text-dev" aria-current="page">Developers</a></li>
-                    
-                    <li><a href="dao.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dao dark:text-white dark:hover:bg-gray-700 dark:hover:text-dao">DAO</a></li>
-                    <li><a href="ecosystem.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a></li>
-                    <li><a href="wallets.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a></li>
-                    <li><a href="https://explorer.chainweb-community.org/mainnet" target="_blank" class="external-link block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a></li>
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
+                    <li><a href="miners.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Miners</a>
+                    </li>
+
+                    <li><a href="developers.html"
+                            class="block py-2 px-3 md:p-0 text-white bg-dev rounded md:bg-transparent md:text-dev"
+                            aria-current="page">Developers</a></li>
+
+                    <li><a href="dao.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dao dark:text-white dark:hover:bg-gray-700 dark:hover:text-dao">DAO</a>
+                    </li>
+                    <li><a href="ecosystem.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a>
+                    </li>
+                    <li><a href="wallets.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a>
+                    </li>
+                    <li><a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                            class="external-link block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -103,7 +147,7 @@
 
     <section class="pt-32 pb-24 px-4 relative z-10 w-full flex-grow">
         <div class="max-w-7xl mx-auto space-y-16">
-            
+
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
                     Build the <span class="text-dev">Future</span>
@@ -113,54 +157,75 @@
                 </p>
 
                 <div class="mb-10">
-                    <a href="docs/" target="_blank" class="external-link inline-flex items-center px-8 py-3 text-lg font-bold text-white bg-dev rounded-full transition-all duration-200 hover:bg-dev-hover hover:scale-105">
+                    <a href="docs/" target="_blank"
+                        class="external-link inline-flex items-center px-8 py-3 text-lg font-bold text-white bg-dev rounded-full transition-all duration-200 hover:bg-dev-hover hover:scale-105">
                         Official Docs
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
                     </a>
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-3">
-                    <button onclick="scrollToSection('pact-section')" class="px-6 py-2 rounded-full text-sm font-bold bg-white dark:bg-surface-card border border-gray-300 dark:border-gray-700 hover:border-dev hover:text-dev transition-all">Pact</button>
-                    <button onclick="scrollToSection('chainweb-section')" class="px-6 py-2 rounded-full text-sm font-bold bg-white dark:bg-surface-card border border-gray-300 dark:border-gray-700 hover:border-dev hover:text-dev transition-all">Chainweb</button>
-                    <button onclick="scrollToSection('tools-section')" class="px-6 py-2 rounded-full text-sm font-bold bg-white dark:bg-surface-card border border-gray-300 dark:border-gray-700 hover:border-dev hover:text-dev transition-all">Tools</button>
+                    <button onclick="scrollToSection('pact-section')"
+                        class="px-6 py-2 rounded-full text-sm font-bold bg-white dark:bg-surface-card border border-gray-300 dark:border-gray-700 hover:border-dev hover:text-dev transition-all">Pact</button>
+                    <button onclick="scrollToSection('chainweb-section')"
+                        class="px-6 py-2 rounded-full text-sm font-bold bg-white dark:bg-surface-card border border-gray-300 dark:border-gray-700 hover:border-dev hover:text-dev transition-all">Chainweb</button>
+                    <button onclick="scrollToSection('tools-section')"
+                        class="px-6 py-2 rounded-full text-sm font-bold bg-white dark:bg-surface-card border border-gray-300 dark:border-gray-700 hover:border-dev hover:text-dev transition-all">Tools</button>
                 </div>
             </div>
 
-            <div id="pact-section" class="relative overflow-hidden rounded-3xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 scroll-mt-32">
+            <div id="pact-section"
+                class="relative overflow-hidden rounded-3xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 scroll-mt-32">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
-                    
+
                     <div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                         <div class="flex items-center space-x-3 mb-6">
-                            <img src="img/pact_dark.svg" onerror="this.style.display='none'" alt="Pact" class="h-10 w-auto block dark:hidden">
-                            <img src="img/pact_light.svg" onerror="this.style.display='none'" alt="Pact" class="h-10 w-auto hidden dark:block">
+                            <img src="img/pact_dark.svg" onerror="this.style.display='none'" alt="Pact"
+                                class="h-10 w-auto block dark:hidden">
+                            <img src="img/pact_light.svg" onerror="this.style.display='none'" alt="Pact"
+                                class="h-10 w-auto hidden dark:block">
                         </div>
-                        
+
                         <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                            The smartest smart contract language. Pact is human-readable, safe by design, and supports formal verification. It allows you to write bugs-free code that can be upgraded easily.
+                            The smartest smart contract language. Pact is human-readable, safe by design, and supports
+                            formal verification. It allows you to write bugs-free code that can be upgraded easily.
                         </p>
 
                         <div class="flex flex-wrap gap-4">
-                            <a href="docs/" target="_blank" class="external-link inline-flex items-center px-6 py-3 text-base font-bold text-white bg-gray-900 dark:bg-white dark:text-black rounded-lg hover:opacity-90 transition-opacity">
+                            <a href="docs/" target="_blank"
+                                class="external-link inline-flex items-center px-6 py-3 text-base font-bold text-white bg-gray-900 dark:bg-white dark:text-black rounded-lg hover:opacity-90 transition-opacity">
                                 Pact Docs
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                    </path>
+                                </svg>
                             </a>
-                            <a href="https://www.pact-community.org/" target="_blank" class="external-link inline-flex items-center px-6 py-3 text-base font-medium text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            <a href="https://www.pact-community.org/" target="_blank"
+                                class="external-link inline-flex items-center px-6 py-3 text-base font-medium text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                                 Community Tutorials
                             </a>
                         </div>
                     </div>
 
-                    <div class="bg-gray-50 dark:bg-[#0a0a0a] p-8 md:p-12 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-gray-200 dark:border-gray-800">
-                        <div class="w-full max-w-md bg-white dark:bg-[#151515] rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 font-mono text-sm">
+                    <div
+                        class="bg-gray-50 dark:bg-[#0a0a0a] p-8 md:p-12 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-gray-200 dark:border-gray-800">
+                        <div
+                            class="w-full max-w-md bg-white dark:bg-[#151515] rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 font-mono text-sm">
                             <div class="flex space-x-2 mb-4">
                                 <div class="w-3 h-3 rounded-full bg-red-500"></div>
                                 <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                                 <div class="w-3 h-3 rounded-full bg-green-500"></div>
                             </div>
                             <div class="space-y-2 text-gray-800 dark:text-gray-400">
-                                <p><span class="text-purple-600 dark:text-purple-400">module</span> <span class="text-blue-600 dark:text-blue-400">coin</span> GOVERNANCE</p>
+                                <p><span class="text-purple-600 dark:text-purple-400">module</span> <span
+                                        class="text-blue-600 dark:text-blue-400">coin</span> GOVERNANCE</p>
                                 <p class="pl-4 text-gray-500 dark:text-gray-500">"The standard coin contract."</p>
-                                <p class="pl-4"><span class="text-purple-600 dark:text-purple-400">defcap</span> <span class="text-blue-600 dark:text-blue-400">TRANSFER</span> ()</p>
+                                <p class="pl-4"><span class="text-purple-600 dark:text-purple-400">defcap</span> <span
+                                        class="text-blue-600 dark:text-blue-400">TRANSFER</span> ()</p>
                                 <p class="pl-8">"Managed by the coin account."</p>
                                 <p class="pl-8">...</p>
                             </div>
@@ -170,28 +235,37 @@
                 </div>
             </div>
 
-            <div id="chainweb-section" class="relative overflow-hidden rounded-3xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 scroll-mt-32">
+            <div id="chainweb-section"
+                class="relative overflow-hidden rounded-3xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 scroll-mt-32">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
-                    
-                    <div class="order-2 lg:order-1 bg-gray-50 dark:bg-[#0a0a0a] p-8 md:p-12 flex items-center justify-center border-t lg:border-t-0 lg:border-r border-gray-200 dark:border-gray-800">
+
+                    <div
+                        class="order-2 lg:order-1 bg-gray-50 dark:bg-[#0a0a0a] p-8 md:p-12 flex items-center justify-center border-t lg:border-t-0 lg:border-r border-gray-200 dark:border-gray-800">
                         <div class="w-full max-w-md relative flex items-center justify-center">
-                            <img src="img/chainweb_20_chains_dark.svg" onerror="this.style.display='none'" alt="Chainweb Graph" class="w-full h-auto object-contain block dark:hidden">
-                            <img src="img/chainweb_20_chains_light.svg" onerror="this.style.display='none'" alt="Chainweb Graph" class="w-full h-auto object-contain hidden dark:block">
+                            <img src="img/chainweb_20_chains_dark.svg" onerror="this.style.display='none'"
+                                alt="Chainweb Graph" class="w-full h-auto object-contain block dark:hidden">
+                            <img src="img/chainweb_20_chains_light.svg" onerror="this.style.display='none'"
+                                alt="Chainweb Graph" class="w-full h-auto object-contain hidden dark:block">
                         </div>
                     </div>
 
                     <div class="order-1 lg:order-2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                         <div class="flex items-center space-x-3 mb-6">
-                            <img src="img/chainweb_dark.svg" onerror="this.style.display='none'" alt="Chainweb" class="h-10 w-auto block dark:hidden">
-                            <img src="img/chainweb_light.svg" onerror="this.style.display='none'" alt="Chainweb" class="h-10 w-auto hidden dark:block">
+                            <img src="img/chainweb_dark.svg" onerror="this.style.display='none'" alt="Chainweb"
+                                class="h-10 w-auto block dark:hidden">
+                            <img src="img/chainweb_light.svg" onerror="this.style.display='none'" alt="Chainweb"
+                                class="h-10 w-auto hidden dark:block">
                         </div>
-                        
+
                         <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                            The only sharded Layer-1 Proof-of-Work network that scales. Chainweb braids together multiple Bitcoin-like chains to deliver massive throughput without compromising security.
+                            The only sharded Layer-1 Proof-of-Work network that scales. Chainweb braids together
+                            multiple Bitcoin-like chains to deliver massive throughput without compromising security.
                         </p>
 
                         <div class="flex flex-wrap gap-4">
-                            <a href="https://cdn.sanity.io/files/agrhq0bu/production/1e4f5f6b99d1cb0701432df6e23e9bbbf46ea363.pdf" target="_blank" class="external-link inline-flex items-center px-6 py-3 text-base font-medium text-dev border border-dev rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
+                            <a href="https://cdn.sanity.io/files/agrhq0bu/production/1e4f5f6b99d1cb0701432df6e23e9bbbf46ea363.pdf"
+                                target="_blank"
+                                class="external-link inline-flex items-center px-6 py-3 text-base font-medium text-dev border border-dev rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
                                 Whitepaper
                             </a>
                         </div>
@@ -207,98 +281,188 @@
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    
-                    <a href="https://docs.kadena.io/" target="_blank" class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+
+                    <a href="https://docs.kadena.io/" target="_blank"
+                        class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                    </path>
+                                </svg>
                             </div>
-                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">Kadena Docs</h3>
                         <p class="text-xs text-gray-500 mt-1">Official Documentation</p>
                     </a>
 
-                    <a href="https://pact-util-lib.readthedocs.io/en/beta_0.11/" target="_blank" class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+                    <a href="https://pact-util-lib.readthedocs.io/en/beta_0.11/" target="_blank"
+                        class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                    </path>
+                                </svg>
                             </div>
-                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">Pact Util Lib</h3>
                         <p class="text-xs text-gray-500 mt-1">Smart Contract Standards</p>
                     </a>
 
-                    <a href="https://explorer.chainweb-community.org/mainnet" target="_blank" class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+                    <a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                        class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                    </path>
+                                </svg>
                             </div>
-                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">Kadena Explorer</h3>
                         <p class="text-xs text-gray-500 mt-1">Block Explorer</p>
                     </a>
 
-                    <a href="https://github.com/kda-community/chainweaver" target="_blank" class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+                    <a href="https://github.com/kda-community/chainweaver" target="_blank"
+                        class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
                             </div>
-                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">Chainweaver</h3>
                         <p class="text-xs text-gray-500 mt-1">IDE & Wallet</p>
                     </a>
 
-                    <a href="https://github.com/kda-community/kda-tool" target="_blank" class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+                    <a href="https://github.com/kda-community/kda-tool" target="_blank"
+                        class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z">
+                                    </path>
+                                </svg>
                             </div>
-                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">KDA-Tool</h3>
                         <p class="text-xs text-gray-500 mt-1">Utilities</p>
                     </a>
 
-                    <a href="#" class="group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+                    <a href="#"
+                        class="group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                    </path>
+                                </svg>
                             </div>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">Testnet Faucet</h3>
                         <p class="text-xs text-gray-500 mt-1">Coming Soon</p>
                     </a>
 
-                    <a href="https://ide.forkme.fun/" target="_blank" class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+                    <a href="https://ide.forkme.fun/" target="_blank"
+                        class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
                             </div>
-                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">Online REPL</h3>
                         <p class="text-xs text-gray-500 mt-1">Test Code</p>
                     </a>
 
-                    <a href="https://api.chainweb-community.org/openapi/" target="_blank" class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+                    <a href="https://api.chainweb-community.org/openapi/" target="_blank"
+                        class="external-link group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                    </path>
+                                </svg>
                             </div>
-                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <svg class="w-4 h-4 text-gray-400 group-hover:text-dev" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">Node API</h3>
                         <p class="text-xs text-gray-500 mt-1">Endpoints</p>
                     </a>
 
-                    <a href="ecosystem.html" class="group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
+                    <a href="ecosystem.html"
+                        class="group p-4 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl hover:border-dev dark:hover:border-dev transition-all hover:-translate-y-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-dev transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
+                                </svg>
                             </div>
                         </div>
                         <h3 class="font-bold text-gray-900 dark:text-white">Oracles</h3>
@@ -311,64 +475,96 @@
         </div>
     </section>
 
-    <div id="warning-modal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div id="warning-modal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
         <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
         <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-                <div id="modal-panel" class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+                <div id="modal-panel"
+                    class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md">
                     <div class="p-6">
                         <div class="flex items-center justify-center mb-5">
                             <div class="rounded-full bg-gray-100 dark:bg-gray-800 p-4">
-                            <img src="img/favicon.svg" alt="Kadena" class="h-10 w-10">
+                                <img src="img/favicon.svg" alt="Kadena" class="h-10 w-10">
                             </div>
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-bold leading-6 text-gray-900 dark:text-white" id="modal-title">Leaving Website</h3>
+                            <h3 class="text-xl font-bold leading-6 text-gray-900 dark:text-white" id="modal-title">
+                                Leaving Website</h3>
                             <div class="mt-3">
                                 <p class="text-sm text-gray-500 dark:text-gray-400">
-                                    You are about to visit an external third-party website. Are you sure you want to proceed?
+                                    You are about to visit an external third-party website. Are you sure you want to
+                                    proceed?
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="bg-gray-50 dark:bg-[#0a0a0a] px-6 py-4 flex flex-row-reverse gap-3 sm:px-6">
-                        <button type="button" id="btn-proceed" class="inline-flex w-full justify-center rounded-lg bg-brand px-3 py-2 text-sm font-bold text-black shadow-sm hover:bg-brand-hover sm:w-auto transition-colors">Visit Site</button>
-                        <button type="button" id="btn-cancel" class="inline-flex w-full justify-center rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 sm:w-auto transition-colors">Go Back</button>
+                        <button type="button" id="btn-proceed"
+                            class="inline-flex w-full justify-center rounded-lg bg-brand px-3 py-2 text-sm font-bold text-black shadow-sm hover:bg-brand-hover sm:w-auto transition-colors">Visit
+                            Site</button>
+                        <button type="button" id="btn-cancel"
+                            class="inline-flex w-full justify-center rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 sm:w-auto transition-colors">Go
+                            Back</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
+    <footer
+        class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
         <div class="w-full max-w-7xl mx-auto py-8 px-4 flex flex-col items-center justify-center gap-6">
-            
+
             <div class="flex items-center space-x-6">
-                
-                <a href="https://medium.com/@communitykadena" target="_blank" class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Medium">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+
+                <a href="https://medium.com/@communitykadena" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Medium">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                    </svg>
                 </a>
 
-                <a href="https://x.com/KdaCed/communities/explore" target="_blank" class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="X">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                <a href="https://x.com/KdaCed/communities/explore" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="X">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </svg>
                 </a>
 
-                <a href="https://t.me/+3JzP9i19cM8wOWQ8" target="_blank" class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Telegram">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                <a href="https://t.me/+3JzP9i19cM8wOWQ8" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Telegram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                    </svg>
                 </a>
 
-                <a href="https://discord.gg/T4mASjRaRr" target="_blank" class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Discord">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/></svg>
+                <a href="https://discord.gg/T4mASjRaRr" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Discord">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z" />
+                    </svg>
                 </a>
 
-                <a href="https://bsky.app/profile/kdacommunity.bsky.social" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Bluesky">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565-.131 2.032-.234 3.024.338 4.089c.571 1.065 2.613 4.88 2.613 4.88l1.616 3.118s-3.018-.086-4.218 3.323c-.975 2.765 2.393 4.613 5.627 3.566 3.038-.984 5.293-3.659 6.024-4.88.73 1.221 2.986 3.896 6.024 4.88 3.234 1.047 6.602-.801 5.627-3.566-1.2-3.409-4.218-3.323-4.218-3.323l1.616-3.118s2.042-3.815 2.613-4.88c.572-1.065.469-2.057-.564-2.524-.66-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.686 12 10.8Z"/></svg>
+                <a href="https://bsky.app/profile/kdacommunity.bsky.social" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Bluesky">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565-.131 2.032-.234 3.024.338 4.089c.571 1.065 2.613 4.88 2.613 4.88l1.616 3.118s-3.018-.086-4.218 3.323c-.975 2.765 2.393 4.613 5.627 3.566 3.038-.984 5.293-3.659 6.024-4.88.73 1.221 2.986 3.896 6.024 4.88 3.234 1.047 6.602-.801 5.627-3.566-1.2-3.409-4.218-3.323-4.218-3.323l1.616-3.118s2.042-3.815 2.613-4.88c.572-1.065.469-2.057-.564-2.524-.66-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.686 12 10.8Z" />
+                    </svg>
                 </a>
 
             </div>
 
             <div class="text-center">
-                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All Rights Reserved.</span> 
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span
+                        id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All
+                    Rights Reserved.</span>
             </div>
         </div>
     </footer>
@@ -377,11 +573,11 @@
         // SCROLL TO SECTION LOGIC
         function scrollToSection(id) {
             const element = document.getElementById(id);
-            if(element) {
-                const headerOffset = 100; 
+            if (element) {
+                const headerOffset = 100;
                 const elementPosition = element.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
+
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: "smooth"
@@ -409,13 +605,13 @@
         document.body.addEventListener('click', (event) => {
             // Find the closest anchor tag (<a>) to the click
             const link = event.target.closest('a');
-            
+
             if (!link) return; // If not a link, do nothing
 
             // Criteria to trigger the popup:
             // 1. It is inside a Card (Project, Miner, Wallet, Tool)
             const isCardLink = link.closest('.project-card') || link.closest('.miner-card') || link.closest('.wallet-card') || link.closest('.group');
-            
+
             // 2. It is inside the Footer
             const isFooterLink = link.closest('footer');
 
@@ -428,7 +624,7 @@
             // COMBINED CHECK:
             // If it matches ANY criteria above AND it is NOT an internal anchor (#) or javascript
             if ((isCardLink || isFooterLink || isExplicitExternal || isSetupButton) && !link.href.startsWith('javascript') && !link.href.includes('#')) {
-                
+
                 // Final Check: Is it actually an external domain?
                 const currentDomain = window.location.hostname;
                 // If hostname is different (and not empty for local testing), trigger modal
@@ -441,7 +637,7 @@
 
         // Proceed Button (User clicked "Visit Site")
         btnProceed.addEventListener('click', () => {
-            if(targetUrl) {
+            if (targetUrl) {
                 window.open(targetUrl, '_blank');
                 closeModal();
             }
@@ -469,7 +665,7 @@
             document.documentElement.classList.remove('dark');
         }
         var themeToggleBtn = document.getElementById('theme-toggle');
-        themeToggleBtn.addEventListener('click', function() {
+        themeToggleBtn.addEventListener('click', function () {
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
             if (localStorage.getItem('color-theme')) {
@@ -495,7 +691,7 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navbarCta = document.getElementById('navbar-cta');
         menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); 
+            e.stopPropagation();
             navbarCta.classList.toggle('hidden');
         });
         document.addEventListener('click', (event) => {
@@ -508,7 +704,8 @@
 
         // AUTOMATIC YEAR UPDATE
         document.getElementById('current-year').textContent = new Date().getFullYear();
-        
+
     </script>
 </body>
+
 </html>

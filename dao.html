@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kadena Ecosystem | DAO</title>
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
+    <meta name="description"
+        content="Community Governance. Shape the future of the Kadena Ecosystem through decentralized voting and the Kadena DAO.">
+    <meta name="keywords" content="Kadena DAO, Governance, Voting, Decentralized, Community, Proposal">
+    <meta name="author" content="Kadena Community">
+    <link rel="canonical" href="https://kda-community.github.io/dao.html">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kda-community.github.io/dao.html">
     <meta property="og:title" content="Kadena Ecosystem | DAO">
-    <meta property="og:description" content="Community Governance. Shape the future of the Kadena Ecosystem through decentralized voting.">
+    <meta property="og:description"
+        content="Community Governance. Shape the future of the Kadena Ecosystem through decentralized voting.">
     <meta property="og:image" content="https://kda-community.github.io/img/og_card/og_dao.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kda-community.github.io/dao.html">
     <meta property="twitter:title" content="Kadena Ecosystem | DAO">
-    <meta property="twitter:description" content="Community Governance. Shape the future of the Kadena Ecosystem through decentralized voting.">
+    <meta property="twitter:description"
+        content="Community Governance. Shape the future of the Kadena Ecosystem through decentralized voting.">
     <meta property="twitter:image" content="https://kda-community.github.io/img/og_card/og_dao.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
-<script>
+    <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -60,61 +71,85 @@
             }
         }
     </script>
-    
+
     <style>
-        body { transition: background-color 0.3s, color 0.3s; }
-        
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
         /* Utility for aspect ratios */
         .aspect-video {
             aspect-ratio: 16 / 9;
         }
     </style>
 </head>
-<body class="bg-surface-light dark:bg-surface-dark text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:bg-dao selection:text-black overflow-x-hidden flex flex-col min-h-screen">
 
-    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-surface-border bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md">
+<body
+    class="bg-surface-light dark:bg-surface-dark text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:bg-dao selection:text-black overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav
+        class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-surface-border bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
-            
+
             <a href="index.html" class="flex items-center">
                 <img src="img/kadenace_orange_dark.svg" class="h-9 md:h-12 w-auto block dark:hidden" alt="Kadena">
                 <img src="img/kadenace_orange_light.svg" class="h-9 md:h-12 w-auto hidden dark:block" alt="Kadena">
             </a>
 
             <div class="flex md:order-2 space-x-2 md:space-x-4 items-center">
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
                 </button>
-                <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
-                    <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
+                <button id="menu-toggle" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
                 </button>
             </div>
 
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
-                    
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
+
                     <li>
-                        <a href="miners.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Miners</a>
+                        <a href="miners.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Miners</a>
                     </li>
-                    
+
                     <li>
-                        <a href="developers.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dev dark:text-white dark:hover:bg-gray-700 dark:hover:text-dev">Developers</a>
+                        <a href="developers.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dev dark:text-white dark:hover:bg-gray-700 dark:hover:text-dev">Developers</a>
                     </li>
-                    
+
                     <li>
-                        <a href="dao.html" class="block py-2 px-3 md:p-0 text-white bg-dao rounded md:bg-transparent md:text-dao" aria-current="page">DAO</a>
+                        <a href="dao.html"
+                            class="block py-2 px-3 md:p-0 text-white bg-dao rounded md:bg-transparent md:text-dao"
+                            aria-current="page">DAO</a>
                     </li>
-                    
+
                     <li>
-                        <a href="ecosystem.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a>
+                        <a href="ecosystem.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a>
                     </li>
-                    
+
                     <li>
-                        <a href="wallets.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a>
+                        <a href="wallets.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a>
                     </li>
-                    
+
                     <li>
-                        <a href="https://explorer.chainweb-community.org/mainnet" target="_blank" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a>
+                        <a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a>
                     </li>
                 </ul>
             </div>
@@ -123,7 +158,7 @@
 
     <section class="flex-grow flex items-center justify-center pt-32 pb-24 px-4 relative z-10 w-full">
         <div class="max-w-2xl w-full">
-            
+
             <div class="text-center mb-12">
                 <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
                     Community <span class="text-dao">Governance</span>
@@ -133,34 +168,41 @@
                 </p>
             </div>
 
-            <div class="relative bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl p-8 md:p-12 text-center shadow-lg overflow-hidden">
-                
+            <div
+                class="relative bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl p-8 md:p-12 text-center shadow-lg overflow-hidden">
+
                 <div class="flex justify-center mb-8">
-                    <img src="img/kadenaDAO_dark.svg" 
-                         onerror="this.src='https://placehold.co/200x200/FAFAFA/f7931a?text=DAO+Light'" 
-                         alt="Under Construction" 
-                         class="h-32 w-auto block dark:hidden hover:scale-105 transition-transform duration-300">
-                    
-                    <img src="img/kadenaDAO_light.svg" 
-                         onerror="this.src='https://placehold.co/200x200/121212/f7931a?text=DAO+Dark'" 
-                         alt="Under Construction" 
-                         class="h-32 w-auto hidden dark:block hover:scale-105 transition-transform duration-300">
+                    <img src="img/kadenaDAO_dark.svg"
+                        onerror="this.src='https://placehold.co/200x200/FAFAFA/f7931a?text=DAO+Light'"
+                        alt="Under Construction"
+                        class="h-32 w-auto block dark:hidden hover:scale-105 transition-transform duration-300">
+
+                    <img src="img/kadenaDAO_light.svg"
+                        onerror="this.src='https://placehold.co/200x200/121212/f7931a?text=DAO+Dark'"
+                        alt="Under Construction"
+                        class="h-32 w-auto hidden dark:block hover:scale-105 transition-transform duration-300">
                 </div>
 
                 <h2 class="text-2xl font-bold mb-4">Governance dApp</h2>
-                
+
                 <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-md mx-auto leading-relaxed">
-                    We are currently building a secure, on-chain voting platform prompted by <span class="text-gray-900 dark:text-white font-mono font-bold">Pact</span>. 
+                    We are currently building a secure, on-chain voting platform prompted by <span
+                        class="text-gray-900 dark:text-white font-mono font-bold">Pact</span>.
                     <br><span class="text-sm opacity-75 mt-2 block">Status: <strong>Under Construction</strong></span>
                 </p>
 
                 <div class="flex justify-center">
-                    <button type="button" disabled class="group relative inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-dao/50 cursor-not-allowed rounded-lg">
+                    <button type="button" disabled
+                        class="group relative inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-dao/50 cursor-not-allowed rounded-lg">
                         Launch dApp
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
                     </button>
                 </div>
-                
+
                 <p class="mt-4 text-xs text-gray-400">Coming soon to Mainnet</p>
 
             </div>
@@ -168,34 +210,58 @@
         </div>
     </section>
 
-    <footer class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
+    <footer
+        class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
         <div class="w-full max-w-7xl mx-auto py-8 px-4 flex flex-col items-center justify-center gap-6">
-            
+
             <div class="flex items-center space-x-6">
-                
-                <a href="https://medium.com/@communitykadena" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Medium">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+
+                <a href="https://medium.com/@communitykadena" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Medium">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                    </svg>
                 </a>
 
-                <a href="https://x.com/KdaCed/communities/explore" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="X">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                <a href="https://x.com/KdaCed/communities/explore" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="X">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </svg>
                 </a>
 
-                <a href="https://t.me/+3JzP9i19cM8wOWQ8" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Telegram">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                <a href="https://t.me/+3JzP9i19cM8wOWQ8" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Telegram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                    </svg>
                 </a>
 
-                <a href="https://discord.gg/T4mASjRaRr" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Discord">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.077.077 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/></svg>
+                <a href="https://discord.gg/T4mASjRaRr" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Discord">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.077.077 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z" />
+                    </svg>
                 </a>
 
-                <a href="https://bsky.app/profile/kdacommunity.bsky.social" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Bluesky">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565-.131 2.032-.234 3.024.338 4.089c.571 1.065 2.613 4.88 2.613 4.88l1.616 3.118s-3.018-.086-4.218 3.323c-.975 2.765 2.393 4.613 5.627 3.566 3.038-.984 5.293-3.659 6.024-4.88.73 1.221 2.986 3.896 6.024 4.88 3.234 1.047 6.602-.801 5.627-3.566-1.2-3.409-4.218-3.323-4.218-3.323l1.616-3.118s2.042-3.815 2.613-4.88c.572-1.065.469-2.057-.564-2.524-.66-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.686 12 10.8Z"/></svg>
+                <a href="https://bsky.app/profile/kdacommunity.bsky.social" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Bluesky">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565-.131 2.032-.234 3.024.338 4.089c.571 1.065 2.613 4.88 2.613 4.88l1.616 3.118s-3.018-.086-4.218 3.323c-.975 2.765 2.393 4.613 5.627 3.566 3.038-.984 5.293-3.659 6.024-4.88.73 1.221 2.986 3.896 6.024 4.88 3.234 1.047 6.602-.801 5.627-3.566-1.2-3.409-4.218-3.323-4.218-3.323l1.616-3.118s2.042-3.815 2.613-4.88c.572-1.065.469-2.057-.564-2.524-.66-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.686 12 10.8Z" />
+                    </svg>
                 </a>
 
             </div>
-                <div class="text-center">
-                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All Rights Reserved.</span>               
+            <div class="text-center">
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span
+                        id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All
+                    Rights Reserved.</span>
             </div>
         </div>
     </footer>
@@ -212,7 +278,7 @@
             document.documentElement.classList.remove('dark');
         }
         var themeToggleBtn = document.getElementById('theme-toggle');
-        themeToggleBtn.addEventListener('click', function() {
+        themeToggleBtn.addEventListener('click', function () {
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
             if (localStorage.getItem('color-theme')) {
@@ -238,7 +304,7 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navbarCta = document.getElementById('navbar-cta');
         menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); 
+            e.stopPropagation();
             navbarCta.classList.toggle('hidden');
         });
         document.addEventListener('click', (event) => {
@@ -251,7 +317,8 @@
 
         // AUTOMATIC YEAR UPDATE
         document.getElementById('current-year').textContent = new Date().getFullYear();
-        
+
     </script>
 </body>
+
 </html>

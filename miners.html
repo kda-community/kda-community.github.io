@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kadena Ecosystem | Miners</title>
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
+    <meta name="description"
+        content="Secure the network. Find ASIC hardware, mining pools, and setup guides for Chainweb mining.">
+    <meta name="keywords" content="Kadena Mining, ASIC Miners, Mining Pools, Chainweb, Blake2S, Hashrate">
+    <meta name="author" content="Kadena Community">
+    <link rel="canonical" href="https://kda-community.github.io/miners.html">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kda-community.github.io/miners.html">
     <meta property="og:title" content="Kadena Ecosystem | Miners">
-    <meta property="og:description" content="Secure the network. Find ASIC hardware, mining pools, and setup guides for Chainweb.">
+    <meta property="og:description"
+        content="Secure the network. Find ASIC hardware, mining pools, and setup guides for Chainweb.">
     <meta property="og:image" content="https://kda-community.github.io/img/og_card/og_miners.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kda-community.github.io/miners.html">
     <meta property="twitter:title" content="Kadena Ecosystem | Miners">
-    <meta property="twitter:description" content="Secure the network. Find ASIC hardware, mining pools, and setup guides for Chainweb.">
+    <meta property="twitter:description"
+        content="Secure the network. Find ASIC hardware, mining pools, and setup guides for Chainweb.">
     <meta property="twitter:image" content="https://kda-community.github.io/img/og_card/og_miners.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -60,46 +71,75 @@
             }
         }
     </script>
-    
+
     <style>
-        body { transition: background-color 0.3s, color 0.3s; }
-        
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
         /* Utility for card images */
         .aspect-video {
             aspect-ratio: 16 / 9;
         }
     </style>
 </head>
-<body class="bg-surface-light dark:bg-surface-dark text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:bg-brand selection:text-black overflow-x-hidden flex flex-col min-h-screen">
 
-    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-surface-border bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md">
+<body
+    class="bg-surface-light dark:bg-surface-dark text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:bg-brand selection:text-black overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav
+        class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-surface-border bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
-            
+
             <a href="index.html" class="flex items-center">
                 <img src="img/kadenace_dark.svg" class="h-9 md:h-12 w-auto block dark:hidden" alt="Kadena">
                 <img src="img/kadenace_light.svg" class="h-9 md:h-12 w-auto hidden dark:block" alt="Kadena">
             </a>
 
             <div class="flex md:order-2 space-x-2 md:space-x-4 items-center">
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
                 </button>
-                <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
-                    <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
+                <button id="menu-toggle" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
                 </button>
             </div>
 
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
-                    
-                    <li><a href="miners.html" class="block py-2 px-3 md:p-0 text-white bg-brand rounded md:bg-transparent md:text-brand" aria-current="page">Miners</a></li>
-                    
-                    <li><a href="developers.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dev dark:text-white dark:hover:bg-gray-700 dark:hover:text-dev">Developers</a></li>
-                    <li><a href="dao.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dao dark:text-white dark:hover:bg-gray-700 dark:hover:text-dao">DAO</a></li>
-                    <li><a href="ecosystem.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a></li>
-                    <li><a href="wallets.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a></li>
-                    <li><a href="https://explorer.chainweb-community.org/mainnet" target="_blank" class="external-link block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a></li>
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
+
+                    <li><a href="miners.html"
+                            class="block py-2 px-3 md:p-0 text-white bg-brand rounded md:bg-transparent md:text-brand"
+                            aria-current="page">Miners</a></li>
+
+                    <li><a href="developers.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dev dark:text-white dark:hover:bg-gray-700 dark:hover:text-dev">Developers</a>
+                    </li>
+                    <li><a href="dao.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dao dark:text-white dark:hover:bg-gray-700 dark:hover:text-dao">DAO</a>
+                    </li>
+                    <li><a href="ecosystem.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a>
+                    </li>
+                    <li><a href="wallets.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a>
+                    </li>
+                    <li><a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                            class="external-link block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -107,130 +147,198 @@
 
     <section class="pt-32 pb-24 px-4 relative z-10 w-full flex-grow">
         <div class="max-w-7xl mx-auto">
-            
+
             <div class="text-center mb-16">
                 <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
                     Secure the <span class="text-brand">Network</span>
                 </h1>
                 <p class="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
-                    Kadena is a Layer-1 Proof-of-Work blockchain that scales. 
+                    Kadena is a Layer-1 Proof-of-Work blockchain that scales.
                     <br class="hidden md:block">
-                    We use the <span class="text-gray-900 dark:text-white font-mono font-bold">Blake2S</span> algorithm, optimized for industrial-grade <span class="text-[#3498db] font-bold">ASIC</span> mining.
+                    We use the <span class="text-gray-900 dark:text-white font-mono font-bold">Blake2S</span> algorithm,
+                    optimized for industrial-grade <span class="text-[#3498db] font-bold">ASIC</span> mining.
                 </p>
             </div>
 
-            <div class="mb-16 bg-white dark:bg-[#121212] border border-[#3498db] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div
+                class="mb-16 bg-white dark:bg-[#121212] border border-[#3498db] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
                 <div class="text-center md:text-left">
                     <h2 class="text-2xl md:text-3xl font-bold mb-2 text-gray-900 dark:text-white">Run Your Own Node</h2>
                     <p class="text-gray-600 dark:text-gray-400 max-w-xl">
-                        True decentralization starts with you. Bypass the public pools, save on fees, and strengthen the Chainweb network by running a private mining node.
+                        True decentralization starts with you. Bypass the public pools, save on fees, and strengthen the
+                        Chainweb network by running a private mining node.
                     </p>
                 </div>
                 <div class="flex-shrink-0">
-                    <a id="setup-guide-btn" href="https://github.com/kadena-io/chainweb-node" target="_blank" class="inline-block px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-[#3498db] hover:bg-blue-600 transition-colors">
+                    <a id="setup-guide-btn" href="https://github.com/kadena-io/chainweb-node" target="_blank"
+                        class="inline-block px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-[#3498db] hover:bg-blue-600 transition-colors">
                         Setup Guide
                     </a>
                 </div>
             </div>
 
             <div class="flex flex-wrap justify-center gap-2 mb-12" id="filter-container">
-                <button onclick="filterMiners('all')" data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-sm font-bold border transition-all bg-brand text-black border-brand hover:opacity-90">All</button>
-                <button onclick="filterMiners('pool')" data-filter="pool" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 hover:border-brand hover:text-brand transition-all bg-white dark:bg-surface-card">Mining Pools</button>
-                <button onclick="filterMiners('seller')" data-filter="seller" class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 hover:border-brand hover:text-brand transition-all bg-white dark:bg-surface-card">ASIC Sellers</button>
+                <button onclick="filterMiners('all')" data-filter="all"
+                    class="filter-btn active px-4 py-2 rounded-full text-sm font-bold border transition-all bg-brand text-black border-brand hover:opacity-90">All</button>
+                <button onclick="filterMiners('pool')" data-filter="pool"
+                    class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 hover:border-brand hover:text-brand transition-all bg-white dark:bg-surface-card">Mining
+                    Pools</button>
+                <button onclick="filterMiners('seller')" data-filter="seller"
+                    class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700 hover:border-brand hover:text-brand transition-all bg-white dark:bg-surface-card">ASIC
+                    Sellers</button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="miners-grid">
 
-                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="seller">
+                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm"
+                    data-category="seller">
                     <div class="flex items-start justify-between mb-4">
-                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
-                            <img src="img/miners/miners-goldshell.svg" onerror="this.src='https://placehold.co/100x100?text=GS'" alt="Goldshell" class="w-full h-full object-contain">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/miners/miners-goldshell.svg"
+                                onerror="this.src='https://placehold.co/100x100?text=GS'" alt="Goldshell"
+                                class="w-full h-full object-contain">
                         </div>
-                        <a href="https://x.com/goldshellminer" target="_blank" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="X Profile">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        <a href="https://x.com/goldshellminer" target="_blank"
+                            class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-xl font-bold mb-2">Goldshell</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                            Leading manufacturer of high-efficiency ASIC miners designed specifically for Kadena home and professional mining.
+                            Leading manufacturer of high-efficiency ASIC miners designed specifically for Kadena home
+                            and professional mining.
                         </p>
                     </div>
-                    <a href="https://www.goldshell.com/" target="_blank" class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Visit Website</a>
+                    <a href="https://www.goldshell.com/" target="_blank"
+                        class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Visit
+                        Website</a>
                 </div>
 
-                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="seller">
+                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm"
+                    data-category="seller">
                     <div class="flex items-start justify-between mb-4">
-                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
-                            <img src="img/miners/miners-bitmain.svg" onerror="this.src='https://placehold.co/100x100?text=BM'" alt="Bitmain" class="w-full h-full object-contain">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/miners/miners-bitmain.svg"
+                                onerror="this.src='https://placehold.co/100x100?text=BM'" alt="Bitmain"
+                                class="w-full h-full object-contain">
                         </div>
-                        <a href="https://x.com/BITMAINtech" target="_blank" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="X Profile">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        <a href="https://x.com/BITMAINtech" target="_blank"
+                            class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-xl font-bold mb-2">Bitmain</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                            Industry leader producing the powerful Antminer KA3 series, setting the standard for hashrate performance.
+                            Industry leader producing the powerful Antminer KA3 series, setting the standard for
+                            hashrate performance.
                         </p>
                     </div>
-                    <a href="https://www.bitmain.com/" target="_blank" class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Visit Website</a>
+                    <a href="https://www.bitmain.com/" target="_blank"
+                        class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Visit
+                        Website</a>
                 </div>
 
-                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="seller">
+                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm"
+                    data-category="seller">
                     <div class="flex items-start justify-between mb-4">
-                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
-                            <img src="img/miners/miners-ibelink.svg" onerror="this.src='https://placehold.co/100x100?text=IB'" alt="IBelink" class="w-full h-full object-contain">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/miners/miners-ibelink.svg"
+                                onerror="this.src='https://placehold.co/100x100?text=IB'" alt="IBelink"
+                                class="w-full h-full object-contain">
                         </div>
-                        <a href="https://x.com/Max_iBelink" target="_blank" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="X Profile">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        <a href="https://x.com/Max_iBelink" target="_blank"
+                            class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-xl font-bold mb-2">IBelink</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                            Reliable ASIC hardware manufacturer providing competitive hash power solutions for the Blake2S algorithm.
+                            Reliable ASIC hardware manufacturer providing competitive hash power solutions for the
+                            Blake2S algorithm.
                         </p>
                     </div>
-                    <a href="https://en.ibelink.com.hk/" target="_blank" class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Visit Website</a>
+                    <a href="https://en.ibelink.com.hk/" target="_blank"
+                        class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Visit
+                        Website</a>
                 </div>
 
-                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="pool">
+                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm"
+                    data-category="pool">
                     <div class="flex items-start justify-between mb-4">
-                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
-                            <img src="img/miners/miners-poolflare.svg" onerror="this.src='https://placehold.co/100x100?text=PF'" alt="Poolflare" class="w-full h-full object-contain">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/miners/miners-poolflare.svg"
+                                onerror="this.src='https://placehold.co/100x100?text=PF'" alt="Poolflare"
+                                class="w-full h-full object-contain">
                         </div>
                         <div class="w-9 h-9"></div>
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-xl font-bold mb-2">Poolflare</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                            A highly stable PPLNS mining pool with low fees and excellent uptime, specifically optimized for Kadena.
+                            A highly stable PPLNS mining pool with low fees and excellent uptime, specifically optimized
+                            for Kadena.
                         </p>
                     </div>
-                    <a href="https://poolflare.net/coin/kda/pool" target="_blank" class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Start Mining</a>
+                    <a href="https://poolflare.net/coin/kda/pool" target="_blank"
+                        class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Start
+                        Mining</a>
                 </div>
 
-                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm" data-category="pool">
+                <div class="miner-card group h-full flex flex-col p-6 bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-brand dark:hover:border-brand transition-all duration-300 hover:-translate-y-1 shadow-sm"
+                    data-category="pool">
                     <div class="flex items-start justify-between mb-4">
-                        <div class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
-                            <img src="img/miners/miners-antpool.svg" onerror="this.src='https://placehold.co/100x100?text=AP'" alt="Antpool" class="w-full h-full object-contain">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gray-100 dark:bg-gray-800 p-2 flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <img src="img/miners/miners-antpool.svg"
+                                onerror="this.src='https://placehold.co/100x100?text=AP'" alt="Antpool"
+                                class="w-full h-full object-contain">
                         </div>
-                        <a href="https://x.com/AntPoolofficial" target="_blank" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="X Profile">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        <a href="https://x.com/AntPoolofficial" target="_blank"
+                            class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            aria-label="X Profile">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-xl font-bold mb-2">Antpool</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                            One of the world's largest multi-cryptocurrency mining pools, offering robust infrastructure for KDA mining.
+                            One of the world's largest multi-cryptocurrency mining pools, offering robust infrastructure
+                            for KDA mining.
                         </p>
                     </div>
-                    <a href="https://www.antpool.com/home" target="_blank" class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Start Mining</a>
+                    <a href="https://www.antpool.com/home" target="_blank"
+                        class="block w-full py-2 text-center text-sm font-bold border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-brand hover:text-black hover:border-brand transition-colors">Start
+                        Mining</a>
                 </div>
 
             </div>
-            
+
             <div id="no-results" class="hidden text-center py-20">
                 <p class="text-xl text-gray-500">No mining resources found.</p>
             </div>
@@ -238,33 +346,39 @@
         </div>
     </section>
 
-    <div id="warning-modal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div id="warning-modal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
         <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
 
         <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-                
-                <div id="modal-panel" class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+
+                <div id="modal-panel"
+                    class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md">
                     <div class="p-6">
                         <div class="flex items-center justify-center mb-5">
                             <div class="rounded-full bg-gray-100 dark:bg-gray-800 p-4">
-                            <img src="img/favicon.svg" alt="Kadena" class="h-10 w-10">
+                                <img src="img/favicon.svg" alt="Kadena" class="h-10 w-10">
                             </div>
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-bold leading-6 text-gray-900 dark:text-white" id="modal-title">Leaving Website</h3>
+                            <h3 class="text-xl font-bold leading-6 text-gray-900 dark:text-white" id="modal-title">
+                                Leaving Website</h3>
                             <div class="mt-3">
                                 <p class="text-sm text-gray-500 dark:text-gray-400">
-                                    You are about to visit an external third-party website. Are you sure you want to proceed?
+                                    You are about to visit an external third-party website. Are you sure you want to
+                                    proceed?
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="bg-gray-50 dark:bg-[#0a0a0a] px-6 py-4 flex flex-row-reverse gap-3 sm:px-6">
-                        <button type="button" id="btn-proceed" class="inline-flex w-full justify-center rounded-lg bg-brand px-3 py-2 text-sm font-bold text-black shadow-sm hover:bg-brand-hover sm:w-auto transition-colors">
+                        <button type="button" id="btn-proceed"
+                            class="inline-flex w-full justify-center rounded-lg bg-brand px-3 py-2 text-sm font-bold text-black shadow-sm hover:bg-brand-hover sm:w-auto transition-colors">
                             Visit Site
                         </button>
-                        <button type="button" id="btn-cancel" class="inline-flex w-full justify-center rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 sm:w-auto transition-colors">
+                        <button type="button" id="btn-cancel"
+                            class="inline-flex w-full justify-center rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 sm:w-auto transition-colors">
                             Go Back
                         </button>
                     </div>
@@ -273,35 +387,59 @@
         </div>
     </div>
 
-    <footer class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
+    <footer
+        class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
         <div class="w-full max-w-7xl mx-auto py-8 px-4 flex flex-col items-center justify-center gap-6">
-            
+
             <div class="flex items-center space-x-6">
-                
-                <a href="https://medium.com/@communitykadena" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Medium">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+
+                <a href="https://medium.com/@communitykadena" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Medium">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                    </svg>
                 </a>
 
-                <a href="https://x.com/KdaCed/communities/explore" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="X">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                <a href="https://x.com/KdaCed/communities/explore" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="X">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </svg>
                 </a>
 
-                <a href="https://t.me/+3JzP9i19cM8wOWQ8" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Telegram">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                <a href="https://t.me/+3JzP9i19cM8wOWQ8" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Telegram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                    </svg>
                 </a>
 
-                <a href="https://discord.gg/T4mASjRaRr" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Discord">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/></svg>
+                <a href="https://discord.gg/T4mASjRaRr" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Discord">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z" />
+                    </svg>
                 </a>
 
-                <a href="https://bsky.app/profile/kdacommunity.bsky.social" target="_blank" class="text-gray-400 hover:text-brand transition-colors" aria-label="Bluesky">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565-.131 2.032-.234 3.024.338 4.089c.571 1.065 2.613 4.88 2.613 4.88l1.616 3.118s-3.018-.086-4.218 3.323c-.975 2.765 2.393 4.613 5.627 3.566 3.038-.984 5.293-3.659 6.024-4.88.73 1.221 2.986 3.896 6.024 4.88 3.234 1.047 6.602-.801 5.627-3.566-1.2-3.409-4.218-3.323-4.218-3.323l1.616-3.118s2.042-3.815 2.613-4.88c.572-1.065.469-2.057-.564-2.524-.66-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.686 12 10.8Z"/></svg>
+                <a href="https://bsky.app/profile/kdacommunity.bsky.social" target="_blank"
+                    class="text-gray-400 hover:text-brand transition-colors" aria-label="Bluesky">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565-.131 2.032-.234 3.024.338 4.089c.571 1.065 2.613 4.88 2.613 4.88l1.616 3.118s-3.018-.086-4.218 3.323c-.975 2.765 2.393 4.613 5.627 3.566 3.038-.984 5.293-3.659 6.024-4.88.73 1.221 2.986 3.896 6.024 4.88 3.234 1.047 6.602-.801 5.627-3.566-1.2-3.409-4.218-3.323-4.218-3.323l1.616-3.118s2.042-3.815 2.613-4.88c.572-1.065.469-2.057-.564-2.524-.66-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.686 12 10.8Z" />
+                    </svg>
                 </a>
 
             </div>
 
             <div class="text-center">
-               <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All Rights Reserved.</span>
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span
+                        id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All
+                    Rights Reserved.</span>
             </div>
         </div>
     </footer>
@@ -327,13 +465,13 @@
         document.body.addEventListener('click', (event) => {
             // Find the closest anchor tag (<a>) to the click
             const link = event.target.closest('a');
-            
+
             if (!link) return; // If not a link, do nothing
 
             // Criteria to trigger the popup:
             // 1. It is inside a Card (Project, Miner, Wallet, Tool)
             const isCardLink = link.closest('.project-card') || link.closest('.miner-card') || link.closest('.wallet-card') || link.closest('.group');
-            
+
             // 2. It is inside the Footer
             const isFooterLink = link.closest('footer');
 
@@ -346,7 +484,7 @@
             // COMBINED CHECK:
             // If it matches ANY criteria above AND it is NOT an internal anchor (#) or javascript
             if ((isCardLink || isFooterLink || isExplicitExternal || isSetupButton) && !link.href.startsWith('javascript') && !link.href.includes('#')) {
-                
+
                 // Final Check: Is it actually an external domain?
                 const currentDomain = window.location.hostname;
                 // If hostname is different (and not empty for local testing), trigger modal
@@ -359,7 +497,7 @@
 
         // Proceed Button (User clicked "Visit Site")
         btnProceed.addEventListener('click', () => {
-            if(targetUrl) {
+            if (targetUrl) {
                 window.open(targetUrl, '_blank');
                 closeModal();
             }
@@ -379,15 +517,15 @@
         // --- 2. MINER FILTER LOGIC ---
         function filterMiners(category) {
             const buttons = document.querySelectorAll('.filter-btn');
-            
+
             const inactiveClasses = ['bg-white', 'dark:bg-surface-card', 'border-gray-300', 'dark:border-gray-700', 'font-medium', 'hover:border-brand', 'hover:text-brand'];
             const activeClasses = ['bg-brand', 'text-black', 'border-brand', 'font-bold'];
 
             buttons.forEach(btn => {
                 const btnFilter = btn.getAttribute('data-filter');
-                
+
                 btn.className = 'filter-btn px-4 py-2 rounded-full text-sm transition-all ' + inactiveClasses.join(' ');
-                
+
                 if (btnFilter === category) {
                     btn.className = 'filter-btn px-4 py-2 rounded-full text-sm transition-all ' + activeClasses.join(' ');
                 }
@@ -407,7 +545,7 @@
             });
 
             const noResults = document.getElementById('no-results');
-            if(visibleCount === 0) noResults.classList.remove('hidden');
+            if (visibleCount === 0) noResults.classList.remove('hidden');
             else noResults.classList.add('hidden');
         }
 
@@ -422,7 +560,7 @@
             document.documentElement.classList.remove('dark');
         }
         var themeToggleBtn = document.getElementById('theme-toggle');
-        themeToggleBtn.addEventListener('click', function() {
+        themeToggleBtn.addEventListener('click', function () {
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
             if (localStorage.getItem('color-theme')) {
@@ -448,7 +586,7 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navbarCta = document.getElementById('navbar-cta');
         menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); 
+            e.stopPropagation();
             navbarCta.classList.toggle('hidden');
         });
         document.addEventListener('click', (event) => {
@@ -464,4 +602,5 @@
 
     </script>
 </body>
+
 </html>
