@@ -281,10 +281,26 @@
                         </p>
 
                         <div class="flex flex-wrap gap-4">
+                            <button
+                                onclick="openPdfModal('https://cdn.sanity.io/files/agrhq0bu/production/1e4f5f6b99d1cb0701432df6e23e9bbbf46ea363.pdf')"
+                                class="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-dev border border-dev rounded-lg hover:bg-dev hover:text-white dark:hover:bg-dev dark:hover:text-white transition-all shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
+                                </svg>
+                                Read Whitepaper
+                            </button>
                             <a href="https://cdn.sanity.io/files/agrhq0bu/production/1e4f5f6b99d1cb0701432df6e23e9bbbf46ea363.pdf"
                                 target="_blank"
-                                class="external-link inline-flex items-center px-6 py-3 text-base font-medium text-dev border border-dev rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
-                                Whitepaper
+                                class="inline-flex items-center justify-center p-3 text-gray-500 hover:text-dev dark:text-gray-400 dark:hover:text-dev border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-surface-card transition-colors"
+                                title="Download directly" onclick="event.stopPropagation();">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -530,6 +546,56 @@
         </div>
     </div>
 
+    <div id="pdf-modal" class="fixed inset-0 z-[100] hidden flex-col transition-opacity"
+        aria-labelledby="pdf-modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-black/80 backdrop-blur-sm" id="pdf-modal-backdrop"></div>
+        <div class="relative z-10 flex flex-col w-full h-full max-w-6xl mx-auto p-2 sm:p-4 md:p-8 max-h-[100dvh]">
+            <div
+                class="flex justify-between items-center bg-white dark:bg-surface-card rounded-t-xl px-4 py-3 border-b border-gray-200 dark:border-gray-800 shrink-0">
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2"
+                    id="pdf-modal-title">
+                    <svg class="w-5 h-5 text-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg>
+                    Whitepaper Preview
+                </h3>
+                <button type="button" id="btn-close-pdf"
+                    class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none transition-colors p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <span class="sr-only">Close</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div
+                class="flex-grow bg-gray-100 dark:bg-[#0a0a0a] w-full rounded-b-xl overflow-hidden shadow-2xl relative">
+                <!-- Loader shown while iframe loads -->
+                <div id="pdf-loader"
+                    class="absolute inset-0 flex flex-col items-center justify-center bg-white dark:bg-surface-card z-0">
+                    <svg class="animate-spin h-8 w-8 text-dev mb-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                    <span class="text-gray-500 dark:text-gray-400 font-medium text-sm text-center px-4">Loading
+                        document...<br><span class="text-xs opacity-75 mt-1 block">(This may take a moment depending on
+                            the file size)</span></span>
+                </div>
+                <!-- Embedded Viewer -->
+                <iframe id="pdf-iframe" class="absolute inset-0 w-full h-full border-none z-10 bg-white" src=""
+                    allow="autoplay"
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <footer
         class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
         <div class="w-full max-w-7xl mx-auto py-8 px-4 flex flex-col items-center justify-center gap-6">
@@ -669,6 +735,49 @@
             const panel = document.getElementById('modal-panel');
             if (!panel.contains(e.target)) {
                 closeModal();
+            }
+        });
+
+        // --- PDF PREVIEW MODAL LOGIC ---
+        const pdfModal = document.getElementById('pdf-modal');
+        const pdfIframe = document.getElementById('pdf-iframe');
+        const btnClosePdf = document.getElementById('btn-close-pdf');
+        const pdfModalBackdrop = document.getElementById('pdf-modal-backdrop');
+        const pdfLoader = document.getElementById('pdf-loader');
+
+        function openPdfModal(pdfUrl) {
+            // Using Google Docs Viewer for mobile-friendly PDF rendering
+            const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
+            if (pdfLoader) pdfLoader.style.display = 'flex';
+            pdfIframe.src = viewerUrl;
+            pdfModal.classList.remove('hidden');
+            pdfModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePdfModal() {
+            pdfModal.classList.add('hidden');
+            pdfModal.classList.remove('flex');
+            pdfIframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        if (btnClosePdf) btnClosePdf.addEventListener('click', closePdfModal);
+        if (pdfModalBackdrop) pdfModalBackdrop.addEventListener('click', closePdfModal);
+        if (pdfIframe) {
+            pdfIframe.addEventListener('load', () => {
+                if (pdfLoader) pdfLoader.style.display = 'none';
+            });
+        }
+
+        // --- CHECK URL FOR AUTOLOAD PREVIEW ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('preview') === 'whitepaper') {
+                openPdfModal('https://cdn.sanity.io/files/agrhq0bu/production/1e4f5f6b99d1cb0701432df6e23e9bbbf46ea363.pdf');
+                // Optional: Scroll to the button to show users where they are on the page beneath the modal
+                const pactSection = document.getElementById('chainweb-section');
+                if (pactSection) pactSection.scrollIntoView();
             }
         });
 
