@@ -32,6 +32,8 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: kda-community/pact-5
+        # ref has to be removed once the newest doc branch is merged.
+        ref: fix_docs_A
         path: docs_tmp/pact_tmp
 
     - name: Install node
