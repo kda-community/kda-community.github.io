@@ -36,10 +36,21 @@ jobs:
         ref: fix_docs_A
         path: docs_tmp/pact_tmp
 
+    - name: Checkout Pact repository
+      uses: actions/checkout@v4
+      with:
+        repository: kda-community/kda-tool
+        path: docs_tmp/kda_tool_tmp
+
     - name: Install node
       uses: actions/setup-node@v6
       with:
         node-version: 24
+        
+    - name: Update kda-tool Docs
+      run: |
+        cd docs_tmp
+        cat kda_tool_tmp/README.md >> docs/guides/kda-tool.md
 
     - name: Build Pact Docs
       run: |
