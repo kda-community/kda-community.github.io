@@ -103,6 +103,7 @@ jobs:
         mkdir -p public
         cp -rf *.html public
         cp -rf img public
+        cp -rf pdf public
         
     - name: Install Robots.txt file
       run: | 
