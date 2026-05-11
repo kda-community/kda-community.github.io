@@ -282,7 +282,7 @@
 
                         <div class="flex flex-wrap gap-4">
                             <button
-                                onclick="openPdfModal('https://cdn.sanity.io/files/agrhq0bu/production/1e4f5f6b99d1cb0701432df6e23e9bbbf46ea363.pdf')"
+                                onclick="openPdfModal('docs/chainweb-whitepaper.pdf')"
                                 class="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-dev border border-dev rounded-lg hover:bg-dev hover:text-white dark:hover:bg-dev dark:hover:text-white transition-all shadow-sm">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -293,7 +293,7 @@
                                 </svg>
                                 Read Whitepaper
                             </button>
-                            <a href="https://cdn.sanity.io/files/agrhq0bu/production/1e4f5f6b99d1cb0701432df6e23e9bbbf46ea363.pdf"
+                            <a href="docs/chainweb-whitepaper.pdf"
                                 target="_blank"
                                 class="inline-flex items-center justify-center p-3 text-gray-500 hover:text-dev dark:text-gray-400 dark:hover:text-dev border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-surface-card transition-colors"
                                 title="Download directly" onclick="event.stopPropagation();">
@@ -612,7 +612,6 @@
                 <!-- Embedded Viewer -->
                 <iframe id="pdf-iframe" class="absolute inset-0 w-full h-full border-none z-10 bg-white" src=""
                     allow="autoplay"
-                    sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
                     allowfullscreen></iframe>
             </div>
         </div>
@@ -768,10 +767,8 @@
         const pdfLoader = document.getElementById('pdf-loader');
 
         function openPdfModal(pdfUrl) {
-            // Using Google Docs Viewer for mobile-friendly PDF rendering
-            const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
             if (pdfLoader) pdfLoader.style.display = 'flex';
-            pdfIframe.src = viewerUrl;
+            pdfIframe.src = pdfUrl;
             pdfModal.classList.remove('hidden');
             pdfModal.classList.add('flex');
             document.body.style.overflow = 'hidden';
@@ -796,7 +793,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('preview') === 'whitepaper') {
-                openPdfModal('https://cdn.sanity.io/files/agrhq0bu/production/1e4f5f6b99d1cb0701432df6e23e9bbbf46ea363.pdf');
+                openPdfModal('docs/chainweb-whitepaper.pdf');
                 // Optional: Scroll to the button to show users where they are on the page beneath the modal
                 const pactSection = document.getElementById('chainweb-section');
                 if (pactSection) pactSection.scrollIntoView();
