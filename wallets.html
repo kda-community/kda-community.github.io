@@ -477,10 +477,11 @@
             // If it matches ANY criteria above AND it is NOT an internal anchor (#) or javascript
             if ((isCardLink || isFooterLink || isExplicitExternal || isSetupButton) && !link.href.startsWith('javascript') && !link.href.includes('#')) {
 
-                // Final Check: Is it actually an external domain?
+                // Final Check: Is it actually an external domain or pointing to docs?
                 const currentDomain = window.location.hostname;
-                // If hostname is different (and not empty for local testing), trigger modal
-                if (link.hostname !== currentDomain && link.hostname !== '') {
+                const isDocsPath = link.pathname.startsWith('/docs/') || link.pathname === '/docs';
+                // If hostname is different (and not empty for local testing) OR if it is the docs path, trigger modal
+                if ((link.hostname !== currentDomain && link.hostname !== '') || isDocsPath) {
                     event.preventDefault(); // Stop the immediate navigation
                     openModal(link.href);   // Show our custom modal
                 }
