@@ -20,16 +20,16 @@ jobs:
 
     # Setup
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Checkout Docs repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         repository: kda-community/kadena-docs-new
         path: docs_tmp
 
     - name: Checkout Pact repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         repository: kda-community/pact-5
         # ref has to be removed once the newest doc branch is merged.
@@ -37,13 +37,13 @@ jobs:
         path: docs_tmp/pact_tmp
 
     - name: Checkout KDA tool repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         repository: kda-community/kda-tool
         path: docs_tmp/kda_tool_tmp
 
     - name: Install node
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version: 24
         
@@ -118,7 +118,7 @@ jobs:
       run: tree -L 3 public
 
     - name: Send Artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v5
       with:
           path: ./public
 
@@ -132,4 +132,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
