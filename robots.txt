@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kda-chain.org/sitemap.xml
+Sitemap: https://kda-community.github.io/sitemap.xml
