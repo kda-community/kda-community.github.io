@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kda-chain.org/sitemap.xml
+Sitemap: https://kda-chain.org/docs/sitemap.xml
+
