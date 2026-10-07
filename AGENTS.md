@@ -8,12 +8,12 @@ For colors, typography, surfaces, and interaction/animation rules, the source of
 
 - Hand-written, dependency-free static site: plain HTML + Tailwind CSS loaded via the Play CDN + vanilla JS in one inline `<script>` at the end of each page.
 - No build step, no `package.json`, no framework, no linter, no tests. Do not introduce any of these unless explicitly asked.
-- Public pages (root level): `index.html`, `miners.html`, `developers.html`, `dao.html`, `wallets.html`, `ecosystem.html`. Supporting files: `robots.txt`, `sitemap.xml`, `.nojekyll`, `google683312d1b7002f8b.html` (Google verification — do not touch), `img/`, `pdf/`.
+- Public pages (root level): `index.html`, `miners.html`, `developers.html`, `dao.html`, `wallets.html`, `ecosystem.html`, `how-to-buy.html`. Supporting files: `robots.txt`, `sitemap.xml`, `.nojekyll`, `google683312d1b7002f8b.html` (Google verification — do not touch), `img/`, `pdf/`.
 - Deployment: GitHub Actions, `.github/workflows/publish.yaml` (manual trigger) publishes ONLY: root `*.html`, `img/`, `pdf/`, `sitemap.xml`, `robots.txt`, `.nojekyll`. Anything not in that list (e.g. `AGENTS.md`, this kind of documentation, `opencode.json`) is not shipped — that is intentional, but never reference unpublished files from the HTML.
 
 ## 2. Shared page chrome — invariants
 
-All six pages share the same skeleton. Any change to navbar, footer, warning modal, theme or helper logic must be replicated in **all six pages**, byte-for-byte where applicable:
+All seven pages share the same skeleton. Any change to navbar, footer, warning modal, theme or helper logic must be replicated in **all seven pages**, byte-for-byte where applicable:
 
 - **Navbar**: fixed, glassmorphic (`bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md`), brand logo links to `/` (pair: `img/kadenace_dark.svg` light mode / `img/kadenace_light.svg` dark mode via `block dark:hidden` / `hidden dark:block`), theme-toggle button, hamburger; links in this exact order: Miners, Developers, DAO, Ecosystem, Wallets, Explorer. The current page's link carries `aria-current="page"`. The Explorer link is `target="_blank"` **and** carries class `external-link`.
 - **Head order**: charset/viewport → `<title>` → favicon → description/keywords/author → canonical → OpenGraph → Twitter → `BreadcrumbList` JSON-LD → Google Fonts (Inter + JetBrains Mono) preconnect/link → Tailwind CDN + inline `tailwind.config` (tokens exactly as in style guide §3) → small shared `<style>` (body transition, `.aspect-video`).
@@ -22,7 +22,7 @@ All six pages share the same skeleton. Any change to navbar, footer, warning mod
 - **Selection colors** vary per page family (standard: green/black; DAO: orange/black; Developers: blue/white) — see style guide §4. Preserve each page's existing setting.
 - **Warning modal ("Leaving Website")**: triggered by a single delegated listener — it intercepts clicks on anchors inside `.project-card` / `.miner-card` / `.wallet-card` / `.group`, anywhere inside `<footer>`, elements with class `external-link`, or `#setup-guide-btn`, that point to another hostname (or to `/docs/...`). Internal `#...` anchors and `javascript:` hrefs are skipped. New external CTAs must therefore live inside one of those containers (cards' link rows already qualify) or explicitly carry `external-link`.
 - **Footer**: identical social links (GitHub, Medium, X, Telegram, Discord, Bluesky) and the copyright line. The year is injected at runtime into `#current-year` — never hardcode years in the footer.
-- **Body wrapper**: `bg-surface-light dark:bg-surface-dark bg-grid text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:... overflow-x-hidden flex flex-col min-h-screen`, plus the fixed vignette overlay `<div class="fixed inset-0 pointer-events-none vignette z-0">` immediately inside `<body>`.
+- **Body wrapper**: `bg-surface-light dark:bg-surface-dark text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:... overflow-x-hidden flex flex-col min-h-screen`. Only `ecosystem.html` additionally carries `bg-grid` in its body classes plus a fixed vignette overlay `<div class="fixed inset-0 pointer-events-none vignette z-0">` immediately inside `<body>` — every other page (including the homepage) ships without them.
 - **Script sections** carry banner comments (`// --- UNIVERSAL MODAL LOGIC ---`, `// --- 2. PROJECT FILTER LOGIC ---`, `// --- 3. DARK MODE LOGIC ---`, `// --- 4. BURGER MENU ---`). Keep that convention and numbering if sections grow. The only sanctioned inline JS in markup is the filter pills' `onclick="filterProjects('...')"` — everything else rides the delegated/global listeners.
 
 ## 3. Project cards (ecosystem.html; analogous grids in miners.html / wallets.html)
