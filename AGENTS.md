@@ -8,7 +8,7 @@ For colors, typography, surfaces, and interaction/animation rules, the source of
 
 - Hand-written, dependency-free static site: plain HTML + Tailwind CSS loaded via the Play CDN + vanilla JS in one inline `<script>` at the end of each page.
 - No build step, no `package.json`, no framework, no linter, no tests. Do not introduce any of these unless explicitly asked.
-- Public pages (root level): `index.html`, `miners.html`, `developers.html`, `dao.html`, `wallets.html`, `ecosystem.html`, `how-to-buy.html`. Supporting files: `robots.txt`, `sitemap.xml`, `.nojekyll`, `google683312d1b7002f8b.html` (Google verification — do not touch), `img/`, `pdf/`.
+- Public pages (root level): `index.html`, `miners.html`, `developers.html`, `dao.html`, `wallets.html`, `ecosystem.html`, `how-to-buy.html`. Supporting files: `404.html` (GitHub Pages not-found page; also rewrites trailing-slash `/docs/...` URLs to their extensionless form), `robots.txt`, `sitemap.xml`, `.nojekyll`, `google683312d1b7002f8b.html` (Google verification — do not touch), `img/`, `pdf/`.
 - Deployment: GitHub Actions, `.github/workflows/publish.yaml` (manual trigger) publishes ONLY: root `*.html`, `img/`, `pdf/`, `sitemap.xml`, `robots.txt`, `.nojekyll`. Anything not in that list (e.g. `AGENTS.md`, this kind of documentation, `opencode.json`) is not shipped — that is intentional, but never reference unpublished files from the HTML.
 
 ## 2. Shared page chrome — invariants
