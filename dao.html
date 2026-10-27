@@ -114,6 +114,8 @@
             </a>
 
             <div class="flex md:order-2 space-x-2 md:space-x-4 items-center">
+                <a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                    class="external-link hidden lg:inline-flex items-center px-3 py-2 text-sm rounded-lg text-gray-500 hover:bg-gray-100 hover:text-brand dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-brand transition-colors">Explorer</a>
                 <button id="theme-toggle" type="button"
                     class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -126,7 +128,7 @@
                     </svg>
                 </button>
                 <button id="menu-toggle" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M1 1h15M1 7h15M1 13h15" />
@@ -134,40 +136,50 @@
                 </button>
             </div>
 
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-cta">
                 <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
-
-                    <li>
-                        <a href="miners.html"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Miners</a>
-                    </li>
-
-                    <li>
-                        <a href="developers.html"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dev dark:text-white dark:hover:bg-gray-700 dark:hover:text-dev">Developers</a>
-                    </li>
-
-                    <li>
-                        <a href="dao.html"
-                            class="block py-2 px-3 md:p-0 text-white bg-dao rounded md:bg-transparent md:text-dao"
-                            aria-current="page">DAO</a>
-                    </li>
-
-                    <li>
-                        <a href="ecosystem.html"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a>
-                    </li>
-
-                    <li>
-                        <a href="wallets.html"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a>
-                    </li>
-
-                    <li>
-                        <a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a>
-                    </li>
+                    class="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:items-center lg:space-x-6 lg:mt-0 lg:border-0 lg:bg-white dark:bg-surface-card lg:dark:bg-transparent dark:border-gray-700 shadow-xl lg:shadow-none relative z-50">
+                    <li><a href="miners.html"
+                            class="block py-2 px-3 lg:p-0 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-brand dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:hover:text-brand transition-colors">Miners</a></li>
+                    <li><a href="developers.html"
+                            class="block py-2 px-3 lg:p-0 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-dev dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:hover:text-dev transition-colors">Developers</a></li>
+                    <li><a href="dao.html"
+                            class="block py-2 px-3 lg:p-0 text-white bg-dao rounded lg:bg-transparent lg:text-dao"
+                            aria-current="page">DAO</a></li>
+                    <li><a href="ecosystem.html"
+                            class="block py-2 px-3 lg:p-0 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-brand dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:hover:text-brand transition-colors">Ecosystem</a></li>
+                    <li><a href="wallets.html"
+                            class="block py-2 px-3 lg:p-0 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-brand dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:hover:text-brand transition-colors">Wallets</a></li>
+                    <li class="hidden lg:block self-center h-5 w-px bg-gray-200 dark:bg-gray-700" aria-hidden="true"></li>
+                    <li class="hidden lg:block relative group/menu">
+                    <button type="button" class="flex lg:hidden xl:flex items-center gap-1 px-3 py-2 text-sm lg:text-base font-medium rounded text-gray-900 hover:bg-gray-100 lg:hover:bg-transparent dark:text-gray-400 lg:dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent hover:text-brand dark:hover:text-brand transition-colors">Learn<svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div class="hidden group-hover/menu:block group-focus-within/menu:block absolute left-0 top-full pt-2 z-50">
+                        <div class="min-w-[220px] bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl shadow-xl p-2 flex flex-col gap-1">
+                        <a href="how-to-buy.html" class="block px-3 py-2 text-sm rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-brand transition-colors">How to Buy/Sell</a>
+                        <a href="how-to.html" class="block px-3 py-2 text-sm rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-brand transition-colors">How-to Guides</a>
+                        </div>
+                    </div>
+                </li>
+                    <li class="hidden lg:block self-center h-5 w-px bg-gray-200 dark:bg-gray-700" aria-hidden="true"></li>
+                    <li class="hidden lg:block relative group/menu">
+                    <button type="button" class="flex lg:hidden xl:flex items-center gap-1 px-3 py-2 text-sm lg:text-base font-medium rounded text-gray-900 hover:bg-gray-100 lg:hover:bg-transparent dark:text-gray-400 lg:dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent hover:text-brand dark:hover:text-brand transition-colors">Story<svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div class="hidden group-hover/menu:block group-focus-within/menu:block absolute left-0 top-full pt-2 z-50">
+                        <div class="min-w-[220px] bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-xl shadow-xl p-2 flex flex-col gap-1">
+                        <a href="history.html" class="block px-3 py-2 text-sm rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-brand transition-colors">History</a>
+                        <a href="timeline.html" class="block px-3 py-2 text-sm rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-brand transition-colors">Timeline</a>
+                        </div>
+                    </div>
+                </li>
+                    <li class="lg:hidden"><a href="how-to-buy.html"
+                            class="block px-3 py-2 lg:p-0 text-sm lg:text-base rounded text-gray-900 hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-brand dark:text-gray-400 lg:dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:hover:text-brand transition-colors">How to Buy/Sell</a></li>
+                    <li class="lg:hidden"><a href="how-to.html"
+                            class="block px-3 py-2 lg:p-0 text-sm lg:text-base rounded text-gray-900 hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-brand dark:text-gray-400 lg:dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:hover:text-brand transition-colors">How-to Guides</a></li>
+                    <li class="lg:hidden"><a href="history.html"
+                            class="block px-3 py-2 lg:p-0 text-sm lg:text-base rounded text-gray-900 hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-brand dark:text-gray-400 lg:dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:hover:text-brand transition-colors">History</a></li>
+                    <li class="lg:hidden"><a href="timeline.html"
+                            class="block px-3 py-2 lg:p-0 text-sm lg:text-base rounded text-gray-900 hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-brand dark:text-gray-400 lg:dark:text-white dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:hover:text-brand transition-colors">Timeline</a></li>
+                    <li class="lg:hidden"><a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                            class="external-link block px-3 py-2 rounded text-sm text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">Explorer</a></li>
                 </ul>
             </div>
         </div>
