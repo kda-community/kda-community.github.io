@@ -28,31 +28,55 @@
 
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "name": "Kadena Community Ecosystem",
-          "url": "https://kda-community.github.io/",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://kda-community.github.io/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "Organization",
-          "name": "Kadena Community",
-          "url": "https://kda-community.github.io/",
-          "logo": "https://kda-community.github.io/img/kadenace_dark.svg",
-          "sameAs": [
-            "https://x.com/KdaCed",
-            "https://medium.com/@communitykadena",
-            "https://discord.gg/T4mASjRaRr",
-            "https://t.me/+3JzP9i19cM8wOWQ8"
+          "@context": "https://schema.org",
+          "@graph": [
+                {
+                      "@type": "WebSite",
+                      "name": "Kadena Community Ecosystem",
+                      "url": "https://kda-community.github.io/",
+                      "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://kda-community.github.io/?q={search_term_string}",
+                            "query-input": "required name=search_term_string"
+                      }
+                },
+                {
+                      "@type": "Organization",
+                      "name": "Kadena Community",
+                      "description": "The Kadena public blockchain is alive, maintained since October 2025 by the KDA Community Edition.",
+                      "slogan": "Alive since October 2025 — maintained by the KDA Community Edition.",
+                      "foundingDate": "2025-10",
+                      "url": "https://kda-community.github.io/",
+                      "logo": "https://kda-community.github.io/img/kadenace_dark.svg",
+                      "sameAs": [
+                            "https://x.com/KdaCed",
+                            "https://medium.com/@communitykadena",
+                            "https://discord.gg/T4mASjRaRr",
+                            "https://t.me/+3JzP9i19cM8wOWQ8"
+                      ]
+                },
+                {
+                      "@type": "FAQPage",
+                      "mainEntity": [
+                            {
+                                  "@type": "Question",
+                                  "name": "Is Kadena still active?",
+                                  "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "The Kadena public blockchain is alive, maintained since October 2025 by the KDA Community Edition. Chainweb and Pact continue to ship releases and governance votes under community stewardship."
+                                  }
+                            },
+                            {
+                                  "@type": "Question",
+                                  "name": "Who maintains the Kadena blockchain?",
+                                  "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "Since October 2025 the KDA Community Edition stewards the Kadena public blockchain, its Chainweb nodes, the Pact language, and the surrounding ecosystem."
+                                  }
+                            }
+                      ]
+                }
           ]
-        }
-      ]
     }
     </script>
 
@@ -198,7 +222,7 @@
             </h1>
 
             <p
-                class="mb-10 text-base md:text-lg font-normal text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
+                class="mb-10 text-base md:text-lg font-normal text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">The <span class="text-brand font-mono font-bold">Kadena</span> public blockchain is alive, maintained since October 2025 by the KDA Community Edition. 
                 With smart contracts written in <span
                     class="text-gray-900 dark:text-white font-mono font-bold">Pact</span>—Kadena’s exceptional
                 language—, secured by <span class="text-[#3498db] font-mono font-bold">Chainweb</span>’s scalable
@@ -398,6 +422,7 @@
                 <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span
                         id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All
                     Rights Reserved.</span>
+                <span class="mt-1 block text-xs text-gray-500 dark:text-gray-400">Alive since October 2025 — maintained by the KDA Community Edition.</span>
             </div>
         </div>
     </footer>

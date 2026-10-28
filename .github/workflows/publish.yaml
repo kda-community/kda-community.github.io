@@ -108,6 +108,7 @@ jobs:
         cp -f robots.txt public/
         cp -f .nojekyll public/
         cp -f news.json public/
+        cp -f llms.txt public/
         
     - name: Refresh news.json
       run: |
