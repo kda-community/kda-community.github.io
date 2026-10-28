@@ -1,6 +1,6 @@
 # Kadena Community Edition
 
-> The Kadena public blockchain is alive, maintained since October 2025 by the KDA Community Edition.
+> The Kadena public blockchain has been running since October 30, 2019, maintained by the KDA Community Edition since October 2025.
 
 Kadena Community Edition is the official community hub for the Kadena blockchain (KDA): a scalable Layer-1 Proof-of-Work network using the Chainweb architecture and the Pact smart contract language. Since October 2025 the network is stewarded by the community through a decentralized governance model.
 
@@ -8,6 +8,7 @@ Kadena Community Edition is the official community hub for the Kadena blockchain
 - Network: Kadena public blockchain (KDA), Layer-1 Proof-of-Work
 - Scaling: Chainweb — braided, parallel chains
 - Language: Pact — readable, auditable smart contracts
+- Genesis: Chainweb creationTime October 30, 2019 — readable on any node
 - Governance: community-led DAO; maintained by the KDA Community Edition since October 2025
 - Status: active — node releases, governance votes and ecosystem growth continue
 
