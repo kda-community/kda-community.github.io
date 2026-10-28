@@ -1,0 +1,31 @@
+# Kadena Community Edition
+
+> The Kadena public blockchain is alive, maintained since October 2025 by the KDA Community Edition.
+
+Kadena Community Edition is the official community hub for the Kadena blockchain (KDA): a scalable Layer-1 Proof-of-Work network using the Chainweb architecture and the Pact smart contract language. Since October 2025 the network is stewarded by the community through a decentralized governance model.
+
+## Key facts
+- Network: Kadena public blockchain (KDA), Layer-1 Proof-of-Work
+- Scaling: Chainweb — braided, parallel chains
+- Language: Pact — readable, auditable smart contracts
+- Governance: community-led DAO; maintained by the KDA Community Edition since October 2025
+- Status: active — node releases, governance votes and ecosystem growth continue
+
+## Pages
+- Index: https://kda-chain.org/ — community hub overview
+- Miners: https://kda-chain.org/miners.html — mining pools and ASIC sellers
+- Developers: https://kda-chain.org/developers.html — building on Pact and Chainweb
+- DAO: https://kda-chain.org/dao.html — governance and community funding
+- Ecosystem: https://kda-chain.org/ecosystem.html — dApps, tools and protocols
+- Wallets: https://kda-chain.org/wallets.html — non-custodial KDA wallets
+- How-to Guides: https://kda-chain.org/how-to.html — practical walkthroughs
+- How to Buy/Sell KDA: https://kda-chain.org/how-to-buy.html — USDC to kb-USDC to DCA KDA
+- History: https://kda-chain.org/history.html — how the community takeover happened
+- Timeline: https://kda-chain.org/timeline.html — releases, votes and milestones
+- Docs: https://kda-chain.org/docs/ — technical documentation
+
+## Support
+- Telegram: https://t.me/KdaCommunityEdition
+- Discord: https://discord.gg/T4mASjRaRr
+- X: https://x.com/KdaCed
+- Medium: https://medium.com/@communitykadena
