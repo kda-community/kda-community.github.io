@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="135.46667mm"
+   height="135.46661mm"
+   viewBox="0 0 135.46667 135.46661"
+   version="1.1"
+   id="svg1501"
+   xml:space="preserve"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1498"><style
+       id="style2127">
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+    </style><style
+       id="style2207">
+      .cls-1 {
+        fill: #ed0404;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: #cbdbfc;
+      }
+
+      .cls-4 {
+        fill: #790303;
+      }
+
+      .cls-5 {
+        fill: #222035;
+      }
+
+      .cls-6 {
+        fill: #f68383;
+      }
+
+      .cls-7 {
+        fill: #800303;
+      }
+
+      .cls-8 {
+        fill: #aa0303;
+      }
+
+      .cls-9 {
+        fill: #ed0c0c;
+      }
+
+      .cls-10 {
+        display: none;
+      }
+    </style><style
+       id="style5031">
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+    </style><style
+       id="style5300">
+      .cls-1 {
+        fill: #ed0404;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: #cbdbfc;
+      }
+
+      .cls-4 {
+        fill: #790303;
+      }
+
+      .cls-5 {
+        fill: #222035;
+      }
+
+      .cls-6 {
+        fill: #f68383;
+      }
+
+      .cls-7 {
+        fill: #800303;
+      }
+
+      .cls-8 {
+        fill: #aa0303;
+      }
+
+      .cls-9 {
+        fill: #ed0c0c;
+      }
+
+      .cls-10 {
+        display: none;
+      }
+    </style><style
+       id="style527793">.a{fill:#f0b90b;}</style><linearGradient
+       id="bg6"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="1"><stop
+         offset="0"
+         stop-color="#1F7590"
+         id="stop1764" /><stop
+         offset="1"
+         stop-color="#0D3A49"
+         id="stop1766" /></linearGradient><linearGradient
+       id="or6"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1"><stop
+         offset="0"
+         stop-color="#F59A3E"
+         id="stop1769" /><stop
+         offset="1"
+         stop-color="#D9640A"
+         id="stop1771" /></linearGradient><linearGradient
+       xlink:href="#or6"
+       id="linearGradient2281"
+       x1="249.69742"
+       y1="302.47546"
+       x2="249.69742"
+       y2="560.58783"
+       gradientTransform="scale(1.0082515,0.99181603)"
+       gradientUnits="userSpaceOnUse" /><linearGradient
+       xlink:href="#bg6"
+       id="linearGradient3841"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="1024"
+       y2="1024" /></defs><g
+     id="layer1"
+     transform="translate(-638.36965,-896.39828)"><g
+       id="g2665"
+       transform="translate(647.49401,1523.048)"><g
+         id="g2111"
+         transform="matrix(0.13229167,0,0,0.13229167,-9.1243571,-626.64973)"><rect
+           width="1024"
+           height="1024"
+           rx="230"
+           fill="url(#bg)"
+           id="rect2086"
+           style="fill:url(#linearGradient3841)"
+           x="0"
+           y="0" /><circle
+           cx="512"
+           cy="512"
+           r="370"
+           fill="#ffffff"
+           opacity="0.08"
+           id="circle2088" /><path
+           d="M 512,556 C 512,430 410,312 252,300 246,450 352,552 512,556 Z"
+           fill="url(#or)"
+           id="path2090"
+           style="fill:url(#linearGradient2281)" /><path
+           d="M 508,528 C 492,380 600,250 778,240 792,400 672,520 508,528 Z"
+           fill="#37b3cf"
+           id="path2092" /><g
+           stroke="#ffffff"
+           stroke-linecap="round"
+           fill="none"
+           id="g2098-2"><path
+             d="M 512,520 V 785"
+             stroke-width="58"
+             id="path2094" /><path
+             d="M 330,795 H 700"
+             stroke-width="66"
+             id="path2096" /></g></g></g></g><style
+     type="text/css"
+     id="style2868">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#2354E6;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#17E6A1;}
+</style></svg>
