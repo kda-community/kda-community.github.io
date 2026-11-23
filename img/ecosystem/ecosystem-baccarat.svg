@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="127mm"
+   height="127mm"
+   viewBox="0 0 127 127"
+   version="1.1"
+   id="svg1501"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1498"><style
+       id="style2127">
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+    </style><style
+       id="style2207">
+      .cls-1 {
+        fill: #ed0404;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: #cbdbfc;
+      }
+
+      .cls-4 {
+        fill: #790303;
+      }
+
+      .cls-5 {
+        fill: #222035;
+      }
+
+      .cls-6 {
+        fill: #f68383;
+      }
+
+      .cls-7 {
+        fill: #800303;
+      }
+
+      .cls-8 {
+        fill: #aa0303;
+      }
+
+      .cls-9 {
+        fill: #ed0c0c;
+      }
+
+      .cls-10 {
+        display: none;
+      }
+    </style><style
+       id="style5031">
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+    </style><style
+       id="style5300">
+      .cls-1 {
+        fill: #ed0404;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: #cbdbfc;
+      }
+
+      .cls-4 {
+        fill: #790303;
+      }
+
+      .cls-5 {
+        fill: #222035;
+      }
+
+      .cls-6 {
+        fill: #f68383;
+      }
+
+      .cls-7 {
+        fill: #800303;
+      }
+
+      .cls-8 {
+        fill: #aa0303;
+      }
+
+      .cls-9 {
+        fill: #ed0c0c;
+      }
+
+      .cls-10 {
+        display: none;
+      }
+    </style><style
+       id="style527793">.a{fill:#f0b90b;}</style><radialGradient
+       id="wash"
+       cx="240"
+       cy="105.6"
+       r="374.39999"
+       fx="240"
+       fy="105.6"
+       gradientUnits="userSpaceOnUse"><stop
+         offset="0"
+         stop-color="#a78bfa"
+         stop-opacity="0.24"
+         id="stop19336" /><stop
+         offset="1"
+         stop-color="#a78bfa"
+         stop-opacity="0"
+         id="stop19338" /></radialGradient></defs><g
+     id="layer1"
+     transform="translate(-314.74894,-1094.1709)"><g
+       id="g19401"
+       transform="matrix(0.26458333,0,0,0.26458333,314.74893,1094.171)"><rect
+         width="480"
+         height="480"
+         rx="36"
+         fill="#16181d"
+         id="rect19343"
+         x="0"
+         y="0" /><rect
+         width="480"
+         height="480"
+         rx="36"
+         fill="url(#wash)"
+         id="rect19345"
+         x="0"
+         y="0"
+         style="fill:url(#wash)" /><rect
+         x="1"
+         y="1"
+         width="478"
+         height="478"
+         rx="35"
+         fill="none"
+         stroke="#282d37"
+         stroke-width="2"
+         id="rect19347" /><g
+         fill="none"
+         stroke="#a78bfa"
+         stroke-opacity="0.55"
+         stroke-width="2"
+         id="g19357"><path
+           d="M 34,56 V 34 h 22"
+           id="path19349" /><path
+           d="M 446,56 V 34 h -22"
+           id="path19351" /><path
+           d="m 34,424 v 22 h 22"
+           id="path19353" /><path
+           d="m 446,424 v 22 h -22"
+           id="path19355" /></g><g
+         fill="none"
+         stroke="#faf9f6"
+         stroke-width="14"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="g19375"><g
+           transform="rotate(-14,200,250)"
+           id="g19363"><rect
+             x="128"
+             y="146"
+             width="144"
+             height="208"
+             rx="16"
+             id="rect19359" /><rect
+             x="150"
+             y="168"
+             width="100"
+             height="164"
+             rx="8"
+             stroke-width="4"
+             stroke-opacity="0.35"
+             id="rect19361" /></g><g
+           transform="rotate(9,290,236)"
+           id="g19373"><rect
+             x="218"
+             y="132"
+             width="144"
+             height="208"
+             rx="16"
+             fill="#16181d"
+             id="rect19365" /><path
+             d="m 290,192 30,44 -30,44 -30,-44 z"
+             fill="#a78bfa"
+             stroke="none"
+             id="path19367" /><path
+             d="m 246,153 9,13 -9,13 -9,-13 z"
+             fill="#faf9f6"
+             stroke="none"
+             id="path19369" /><path
+             d="m 334,293 9,13 -9,13 -9,-13 z"
+             fill="#faf9f6"
+             stroke="none"
+             id="path19371" /></g></g></g></g><style
+     type="text/css"
+     id="style2868">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#2354E6;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#17E6A1;}
+</style></svg>
