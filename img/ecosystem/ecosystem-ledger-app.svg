@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="127mm"
+   height="127mm"
+   viewBox="0 0 127 127"
+   version="1.1"
+   id="svg1501"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1498"><style
+       id="style2127">
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+    </style><style
+       id="style2207">
+      .cls-1 {
+        fill: #ed0404;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: #cbdbfc;
+      }
+
+      .cls-4 {
+        fill: #790303;
+      }
+
+      .cls-5 {
+        fill: #222035;
+      }
+
+      .cls-6 {
+        fill: #f68383;
+      }
+
+      .cls-7 {
+        fill: #800303;
+      }
+
+      .cls-8 {
+        fill: #aa0303;
+      }
+
+      .cls-9 {
+        fill: #ed0c0c;
+      }
+
+      .cls-10 {
+        display: none;
+      }
+    </style><style
+       id="style5031">
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+    </style><style
+       id="style5300">
+      .cls-1 {
+        fill: #ed0404;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: #cbdbfc;
+      }
+
+      .cls-4 {
+        fill: #790303;
+      }
+
+      .cls-5 {
+        fill: #222035;
+      }
+
+      .cls-6 {
+        fill: #f68383;
+      }
+
+      .cls-7 {
+        fill: #800303;
+      }
+
+      .cls-8 {
+        fill: #aa0303;
+      }
+
+      .cls-9 {
+        fill: #ed0c0c;
+      }
+
+      .cls-10 {
+        display: none;
+      }
+    </style><style
+       id="style527793">.a{fill:#f0b90b;}</style><radialGradient
+       id="wash-9"
+       cx="240"
+       cy="105.6"
+       r="374.39999"
+       fx="240"
+       fy="105.6"
+       gradientUnits="userSpaceOnUse"><stop
+         offset="0"
+         stop-color="#a78bfa"
+         stop-opacity="0.24"
+         id="stop19461" /><stop
+         offset="1"
+         stop-color="#a78bfa"
+         stop-opacity="0"
+         id="stop19463" /></radialGradient></defs><g
+     id="layer1"
+     transform="translate(-878.86544,-1203.1021)"><g
+       id="g19514"
+       transform="matrix(0.26458333,0,0,0.26458333,878.86544,1203.1022)"><rect
+         width="480"
+         height="480"
+         rx="36"
+         fill="#16181d"
+         id="rect19468"
+         x="0"
+         y="0" /><rect
+         width="480"
+         height="480"
+         rx="36"
+         fill="url(#wash)"
+         id="rect19470"
+         style="fill:url(#wash-9)"
+         x="0"
+         y="0" /><rect
+         x="1"
+         y="1"
+         width="478"
+         height="478"
+         rx="35"
+         fill="none"
+         stroke="#282d37"
+         stroke-width="2"
+         id="rect19472" /><g
+         fill="none"
+         stroke="#a78bfa"
+         stroke-opacity="0.55"
+         stroke-width="2"
+         id="g19482"><path
+           d="M 34,56 V 34 h 22"
+           id="path19474" /><path
+           d="M 446,56 V 34 h -22"
+           id="path19476" /><path
+           d="m 34,424 v 22 h 22"
+           id="path19478" /><path
+           d="m 446,424 v 22 h -22"
+           id="path19480" /></g><g
+         fill="none"
+         stroke="#faf9f6"
+         stroke-width="14"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="g19492"><rect
+           x="176"
+           y="104"
+           width="128"
+           height="272"
+           rx="40"
+           id="rect19484" /><rect
+           x="200"
+           y="148"
+           width="80"
+           height="112"
+           rx="10"
+           stroke-width="6"
+           id="rect19486" /><path
+           d="m 218,206 16,16 28,-34"
+           stroke="#a78bfa"
+           stroke-width="12"
+           id="path19488" /><circle
+           cx="240"
+           cy="314"
+           r="20"
+           id="circle19490" /></g></g></g><style
+     type="text/css"
+     id="style2868">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#2354E6;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#17E6A1;}
+</style></svg>
